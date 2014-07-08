@@ -3,33 +3,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import "fonts";
+@import "variables";
 
-/* This is the color section breh 
-  TURQUOISE">#ff1abc9c
-  EMERALD">#ff2ecc71
-  PETER">#ff3498db
-  ASPHALT">#ff34495e
-  GREEN">#ff16a085
-  SUNFLOWER">#fff1c40f
-  BELIZE">#ff2980b9
-  WISTERIA">#ff8e44ad
-  ALIZARIN">#ffe74c3c
-  AMETHYST">#ff9b59b6 */
-$turquoise: #1abc9c;
-$emerald: #2ecc71;
-$peter: #3498db;
-$asphalt: #34495e;
-$green: #16a085;
-$sunflower: #f1c40f;
-$belize: #2980b9;
-$wisteria: #8e44ad;
-$alazarin: #e74c3c;
-$amethyst: #9b59b6;
-
-/* This is the font section breh */
-
-$font: 'Montserrat', arial, sans-serif;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -40,7 +16,7 @@ $font: 'Montserrat', arial, sans-serif;
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
   font-family: $font;
   text-rendering: optimizeLegibility;
@@ -54,18 +30,7 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
 
 /* Custom page footer */
 .footer {
@@ -120,3 +85,28 @@ body {
     border-bottom: 0;
   }
 }
+
+.navbar-default {
+  border: none;
+  border-radius: 0px;
+}
+
+.navbar-brand {
+  color: $nudge-blue !important;
+}
+
+.button-login {
+  border-radius: 0px;
+  float: left;
+  height: 50px;
+  background-color: transparent;
+}
+
+.button-login:active {
+  outline: none !important;
+}
+
+.button-login:focus {
+  outline: none !important;
+}
+
