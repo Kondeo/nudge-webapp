@@ -3,6 +3,16 @@ nudge-webapp
 
 Nudge WebApp
 
+
+MVP (sorted by priority):
+. User accounts work, Register, Login, Profile page, Edit, Delete
+. Events can be hosted by user, Edit and Delete work
+. Users can request an RSVP to events and hosts can accept or decline that request
+. User ratings and profile ranking works. users can rank eachother as long as they have attended the same party
+
+
+-----------
+
 Ideas:
 
 Interactive tiles that have clickable titles or interactive content.
