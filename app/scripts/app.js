@@ -1,5 +1,7 @@
 'use strict';
 
+var apiBase = 'https://7385af0d.ngrok.com/';
+
 /**
  * @ngdoc overview
  * @name nudgeWebAppApp
