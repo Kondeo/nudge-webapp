@@ -94,29 +94,72 @@ body {
   color: $nudge-blue !important;
 }
 
+/* This is the button styling section. */
+
 .button-login {
   border-radius: 0px;
   float: left;
   height: 50px;
   background-color: transparent;
-  color: $nudge-blue;
+  color: $nudge-blue !important;
 }
 
 .button-join {
   border-radius: 0px;
+  outline: none !important;
   float: left;
   height: 50px;
   background-color: transparent;
-  color: $alazarin;
+  color: $alazarin !important;
+}
+
+.button-login:hover {
+  outline: none !important;
+  color: $nudge-blue;
 }
 
 .button-login:active {
   outline: none !important;
+  color: #ffd417 !important;
 }
 
 .button-login:focus {
   outline: none !important;
 }
+
+.button-join:hover {
+  outline: none !important;
+  color: $alazarin;
+}
+
+.button-join:active {
+  outline: none !important;
+  color: #ffd417 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* And now for something completely different... */
 
