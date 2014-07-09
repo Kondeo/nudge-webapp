@@ -100,8 +100,9 @@ body {
   border-radius: 0px;
   float: left;
   height: 50px;
+  width: 75px;
   background-color: transparent;
-  color: $nudge-blue !important;
+  color: $emerald !important;
 }
 
 .button-join {
@@ -109,18 +110,32 @@ body {
   outline: none !important;
   float: left;
   height: 50px;
+  width: 75px;
   background-color: transparent;
-  color: $alazarin !important;
+  color: $emerald !important;
+}
+
+.glyphicon-th-large {
+  top: 0;
+  border: none;
+  border-radius: 0px;
+  outline: none !important;
+  float: left;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  color: $nudge-blue !important;
+  padding-bottom: 10px;
 }
 
 .button-login:hover {
   outline: none !important;
-  color: $nudge-blue;
+  color: $green;
+  background-color: #2c3e50;
 }
 
 .button-login:active {
   outline: none !important;
-  color: #ffd417 !important;
 }
 
 .button-login:focus {
@@ -130,13 +145,17 @@ body {
 .button-join:hover {
   outline: none !important;
   color: $alazarin;
+  background-color: #2c3e50;
 }
 
 .button-join:active {
   outline: none !important;
-  color: #ffd417 !important;
 }
 
+.glyphicon-th-large:hover {
+  outline: none !important;
+  background-color: #2c3e50;
+}
 
 
 
