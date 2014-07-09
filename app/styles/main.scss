@@ -94,11 +94,21 @@ body {
   color: $nudge-blue !important;
 }
 
+.navbar-right {
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mobile-nav {
+  border: none;
+}
+
 /* This is the button styling section. */
 
 .button-login {
   border-radius: 0px;
-  float: left;
+  float: right;
   height: 50px;
   width: 75px;
   background-color: transparent;
@@ -108,7 +118,7 @@ body {
 .button-join {
   border-radius: 0px;
   outline: none !important;
-  float: left;
+  float: right;
   height: 50px;
   width: 75px;
   background-color: transparent;
@@ -120,12 +130,21 @@ body {
   border: none;
   border-radius: 0px;
   outline: none !important;
-  float: left;
+  float: right;
   height: 50px;
   width: 50px;
   background-color: transparent;
   color: $nudge-blue !important;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.mobile-nav-button {
+  border: none;
+  margin-right: 5px;
+}
+
+.mobile-nav-butt-bar {
+  background-color: $nudge-blue !important;
 }
 
 .button-login:hover {
@@ -157,8 +176,13 @@ body {
   background-color: #2c3e50;
 }
 
+.mobile-nav-button:hover {
+  background-color: transparent !important;
+}
 
-
+.mobile-nav-button {
+  background-color: transparent !important;
+}
 
 
 
