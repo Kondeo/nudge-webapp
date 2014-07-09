@@ -184,11 +184,33 @@ body {
   background-color: transparent !important;
 }
 
+.home-square-container {
+  margin: 5px;
+  display: inline-block;
+  white-space: no-wrap;
+  overflow: hidden;
+  color: white;
+}
 
+.home-square {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  display: inline-block;
+  white-space: no-wrap;
+  overflow: hidden;
+  border-radius: 4px;
+}
 
-
-
-
+.home-rectangle {
+  width: 310px;
+  height: 150px;
+  margin: 5px;
+  display: inline-block;
+  white-space: no-wrap;
+  overflow: hidden;
+  border-radius: 4px;
+}
 
 
 
