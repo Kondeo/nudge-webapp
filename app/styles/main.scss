@@ -196,22 +196,59 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   color: white;
+  min-width: 160px;
+  min-height: 160px;
 }
 
 .home-square {
   width: 150px;
   height: 150px;
   margin: 5px;
-  display: inline-block;
+  display: none;
+  white-space: no-wrap;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.home-square-img-container {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
 }
 
 .home-square-img {
-  width: 140px;
-  height: 140px;
-  padding: 5px;
+  width: 130px;
+  height: 130px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-square {
+    display: block;
+  }
+  .home-square-img-container {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .home-square-img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+  .home-square-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .home-rectangle {
