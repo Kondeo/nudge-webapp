@@ -84,6 +84,12 @@ body {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 880px;
+  }
+}
+
 .navbar-default {
   border: none;
   border-radius: 0px;
