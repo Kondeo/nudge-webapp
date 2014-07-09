@@ -1,16 +1,10 @@
 <div class="login-container">
-	<table class="login-container-table">
-		<tr>
-			<td><input type="text" class="login-page-username"></input></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="login-page-password"></input></td>
-		</tr>
-		<tr>
-			<td><button class="btn login-page-log-button">LOGIN</button></td>
-		</tr>
-		<tr>
-			<td><span class="no-account">Don't have an account? </span><a class="no-account-link" href="/#/join">Join Here</a><span>.</span></td>
-		</tr>
-	</table>
+	<div class="l-back">
+		<form class="l-form">
+			<input class="l-username" placeholder="USERNAME" ng-model="login.username"></input><br />
+			<input class="l-password" placeholder="PASSWORD" ng-model="login.password"></input><br />
+			<button class="btn l-login" ng-click="submit()">LOGIN</button>
+		</form>
+		<span>Don't have an account? </span><a href="/#/join">Join Here</a><span>.</span>
+	</div>
 </div>
