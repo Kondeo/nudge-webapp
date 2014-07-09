@@ -11,6 +11,14 @@ MVP (sorted by priority):
 . User ratings and profile ranking works. users can rank eachother as long as they have attended the same party
 
 
+Release:
+. Notifications work
+. Can add friends
+. Can see what friends are attending
+. Can categorize events
+. Can view events based on their category
+. Can search events based on their category
+
 -----------
 
 Ideas:
