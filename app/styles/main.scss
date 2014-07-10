@@ -84,6 +84,45 @@ body {
   }
 }
 
+
+/* Header Section */
+
+.l-head {
+  text-align: center;
+  color: #444;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #777;
+}
+
+.j-head {
+  text-align: center;
+  color: #444;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #777;
+}
+
+/* Footer Section */
+
+.l-footer {
+  padding-top: 20px;
+  border-top: 1px solid #777;
+}
+
+.j-footer {
+  padding-top: 20px;
+  border-top: 1px solid #777;
+}
+
+.j-required {
+  text-align: left;
+  padding-left: 27px;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 900px) {
   .container {
     max-width: 880px;
@@ -93,7 +132,7 @@ body {
 .navbar-default {
   border: none;
   border-radius: 0px;
-  background-color: black;
+  background-color: #333;
 }
 
 .navbar-brand {
@@ -111,8 +150,8 @@ body {
 }
 
 .login-container {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 50px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -125,11 +164,35 @@ body {
   }
 }
 
+.join-container {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .join-container {
+    width: 90%;
+  }
+}
+
 .l-back {
-  background-color: $nudge-grey;
-  padding-top: 45px;
-  padding-bottom: 40px;
+  background-color: #444;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 4px;
+  background-image: url('/images/billie_holiday.png');
+}
+
+.j-back {
+  background-color: #444;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+  background-image: url('/images/billie_holiday.png');
 }
 
 
@@ -137,7 +200,7 @@ body {
 
 .l-username {
   border: none !important;
-  background-color: $nudge-blue;
+  background-color: white;
   width: calc(100% - 50px); 
   text-align: center; 
   font-size: 20px; 
@@ -147,14 +210,14 @@ body {
   margin-bottom: 10px;   
 }
 
-.l-username::-webkit-input-placeholder { color:white; }
-.l-username::-moz-placeholder { color:white; } /* firefox 19+ */
-.l-username:-ms-input-placeholder { color:white; } /* ie */
-.l-username:input:-moz-placeholder { color:white; }
+.l-username::-webkit-input-placeholder { color:#444; }
+.l-username::-moz-placeholder { color:#444; } /* firefox 19+ */
+.l-username:-ms-input-placeholder { color:#444; } /* ie */
+.l-username:input:-moz-placeholder { color:#444; }
 
 .l-password {
   border: none !important;
-  background-color: $nudge-blue;
+  background-color: white;
   width: calc(100% - 50px);
   text-align: center;
   font-size: 20px;
@@ -164,10 +227,45 @@ body {
   margin-bottom: 10px;
 }
 
-.l-password::-webkit-input-placeholder { color:white; }
-.l-password::-moz-placeholder { color:white; } /* firefox 19+ */
-.l-password:-ms-input-placeholder { color:white; } /* ie */
-.l-password:input:-moz-placeholder { color:white; }
+.l-password::-webkit-input-placeholder { color:#444; }
+.l-password::-moz-placeholder { color:#444; } /* firefox 19+ */
+.l-password:-ms-input-placeholder { color:#444; } /* ie */
+.l-password:input:-moz-placeholder { color:#444; }
+
+.j-input-1 {
+  border: none !important;
+  background-color: white;
+  width: calc(100% - 50px); 
+  text-align: center; 
+  font-size: 20px; 
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;   
+}
+
+.j-input-1::-webkit-input-placeholder { color:#444; }
+.j-input-1::-moz-placeholder { color:#444; } /* firefox 19+ */
+.j-input-1:-ms-input-placeholder { color:#444; } /* ie */
+.j-input-1:input:-moz-placeholder { color:#444; }
+
+.j-input-2 {
+  border: none !important;
+  background-color: white;
+  width: calc(50% - 27px); 
+  text-align: center; 
+  font-size: 20px; 
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;   
+}
+
+.j-input-2::-webkit-input-placeholder { color:#444; }
+.j-input-2::-moz-placeholder { color:#444; } /* firefox 19+ */
+.j-input-2:-ms-input-placeholder { color:#444; } /* ie */
+.j-input-2:input:-moz-placeholder { color:#444; }
+
 
 /* This is the button styling section. */
 
@@ -175,10 +273,11 @@ body {
   border-radius: 0px;
   margin-left: auto;
   margin-right: auto;
+  float: right;
   height: 50px;
   width: 75px;
   background-color: transparent;
-  color: $emerald !important;
+  color: white !important;
 }
 
 .button-join {
@@ -188,7 +287,7 @@ body {
   height: 50px;
   width: 75px;
   background-color: transparent;
-  color: $emerald !important;
+  color: white !important;
 }
 
 .glyphicon-th-large {
@@ -211,7 +310,17 @@ body {
   font-size: 20px;
   border: none !important;
   color: white;
-  background-color: $emerald;
+  background-color: $nudge-blue;
+}
+
+.j-join {
+  width: calc(100% - 50px);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border: none !important;
+  color: white;
+  background-color: $nudge-blue;
 }
 
 .mobile-nav-button {
@@ -226,7 +335,7 @@ body {
 .button-login:hover {
   outline: none !important;
   color: $green;
-  background-color: #2c3e50;
+  background-color: #444;
 }
 
 .button-login:active {
@@ -240,7 +349,7 @@ body {
 .button-join:hover {
   outline: none !important;
   color: $alazarin;
-  background-color: #2c3e50;
+  background-color: #444;
 }
 
 .button-join:active {
@@ -249,7 +358,7 @@ body {
 
 .glyphicon-th-large:hover {
   outline: none !important;
-  background-color: #2c3e50;
+  background-color: #444;
 }
 
 .mobile-nav-button:hover {
@@ -260,11 +369,43 @@ body {
   background-color: transparent !important;
 }
 
+.l-login:hover {
+  outline: none !important;
+  color: white;
+}
+
+.l-login:active {
+  outline: none !important;
+  color: white;
+}
+
+.l-login:focus {
+  outline: none !important;
+  color: white;
+}
+
+.j-join:hover {
+  outline: none !important;
+  color: white;
+}
+
+.j-join:active {
+  outline: none !important;
+  color: white;
+}
+
+.j-join:focus {
+  outline: none !important;
+  color: white;
+}
+
+
 /* Tile Section */
 .main-container {
   margin-left: auto;
   margin-right: auto;
 }
+
 .tile-container {
   text-align: center;
   width: 100%;
