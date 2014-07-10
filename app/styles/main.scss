@@ -110,11 +110,71 @@ body {
   border: none;
 }
 
+.login-container {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 90%;
+  }
+}
+
+.l-back {
+  background-color: $nudge-grey;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  border-radius: 4px;
+}
+
+
+/* This is the inputs section */
+
+.l-username {
+  border: none !important;
+  background-color: $nudge-blue;
+  width: calc(100% - 50px); 
+  text-align: center; 
+  font-size: 20px; 
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;   
+}
+
+.l-username::-webkit-input-placeholder { color:white; }
+.l-username::-moz-placeholder { color:white; } /* firefox 19+ */
+.l-username:-ms-input-placeholder { color:white; } /* ie */
+.l-username:input:-moz-placeholder { color:white; }
+
+.l-password {
+  border: none !important;
+  background-color: $nudge-blue;
+  width: calc(100% - 50px);
+  text-align: center;
+  font-size: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.l-password::-webkit-input-placeholder { color:white; }
+.l-password::-moz-placeholder { color:white; } /* firefox 19+ */
+.l-password:-ms-input-placeholder { color:white; } /* ie */
+.l-password:input:-moz-placeholder { color:white; }
+
 /* This is the button styling section. */
 
 .button-login {
   border-radius: 0px;
-  float: right;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   width: 75px;
   background-color: transparent;
@@ -142,6 +202,16 @@ body {
   background-color: transparent;
   color: $nudge-blue !important;
   padding-bottom: 8px;
+}
+
+.l-login {
+  width: calc(100% - 50px);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  border: none !important;
+  color: white;
+  background-color: $emerald;
 }
 
 .mobile-nav-button {
