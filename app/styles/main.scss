@@ -270,7 +270,7 @@ body {
   width: 100%;
 }
 
-.home-square-container {
+.tile {
   margin: 5px;
   display: inline-block;
   white-space: no-wrap;
@@ -284,7 +284,7 @@ body {
   width: 150px;
   height: 150px;
   margin: 5px;
-  display: none;
+  display: inline-block;
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
@@ -294,6 +294,7 @@ body {
   width: 150px;
   height: 150px;
   margin: 5px;
+  position: absolute;
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
@@ -306,25 +307,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .home-square {
-    display: block;
-  }
-  .home-square-img-container {
-    width: 60px;
-    height: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  .home-square-img {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-  }
-  .home-square-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .home-rectangle {
