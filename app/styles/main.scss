@@ -86,6 +86,15 @@ body {
 
 /* Header Section */
 
+.l-head {
+  text-align: center;
+  color: #444;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #777;
+}
+
 .j-head {
   text-align: center;
   color: #444;
@@ -97,9 +106,20 @@ body {
 
 /* Footer Section */
 
+.l-footer {
+  padding-top: 20px;
+  border-top: 1px solid #777;
+}
+
 .j-footer {
   padding-top: 20px;
   border-top: 1px solid #777;
+}
+
+.j-required {
+  text-align: left;
+  padding-left: 27px;
+  margin-bottom: 10px;
 }
 
 .navbar-default {
@@ -123,8 +143,8 @@ body {
 }
 
 .login-container {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 50px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -153,10 +173,11 @@ body {
 }
 
 .l-back {
-  background-color: $nudge-grey;
-  padding-top: 45px;
-  padding-bottom: 40px;
+  background-color: #444;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 4px;
+  background-image: url('/images/billie_holiday.png');
 }
 
 .j-back {
@@ -172,7 +193,7 @@ body {
 
 .l-username {
   border: none !important;
-  background-color: $nudge-blue;
+  background-color: white;
   width: calc(100% - 50px); 
   text-align: center; 
   font-size: 20px; 
@@ -182,14 +203,14 @@ body {
   margin-bottom: 10px;   
 }
 
-.l-username::-webkit-input-placeholder { color:white; }
-.l-username::-moz-placeholder { color:white; } /* firefox 19+ */
-.l-username:-ms-input-placeholder { color:white; } /* ie */
-.l-username:input:-moz-placeholder { color:white; }
+.l-username::-webkit-input-placeholder { color:#444; }
+.l-username::-moz-placeholder { color:#444; } /* firefox 19+ */
+.l-username:-ms-input-placeholder { color:#444; } /* ie */
+.l-username:input:-moz-placeholder { color:#444; }
 
 .l-password {
   border: none !important;
-  background-color: $nudge-blue;
+  background-color: white;
   width: calc(100% - 50px);
   text-align: center;
   font-size: 20px;
@@ -199,10 +220,10 @@ body {
   margin-bottom: 10px;
 }
 
-.l-password::-webkit-input-placeholder { color:white; }
-.l-password::-moz-placeholder { color:white; } /* firefox 19+ */
-.l-password:-ms-input-placeholder { color:white; } /* ie */
-.l-password:input:-moz-placeholder { color:white; }
+.l-password::-webkit-input-placeholder { color:#444; }
+.l-password::-moz-placeholder { color:#444; } /* firefox 19+ */
+.l-password:-ms-input-placeholder { color:#444; } /* ie */
+.l-password:input:-moz-placeholder { color:#444; }
 
 .j-input-1 {
   border: none !important;
@@ -281,13 +302,13 @@ body {
   font-size: 20px;
   border: none !important;
   color: white;
-  background-color: $emerald;
+  background-color: $nudge-blue;
 }
 
 .j-join {
   width: calc(100% - 50px);
   border-radius: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 20px;
   border: none !important;
   color: white;
