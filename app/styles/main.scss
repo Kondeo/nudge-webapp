@@ -417,14 +417,14 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   color: white;
-  min-width: 160px;
-  min-height: 160px;
+  min-width: 260px;
+  min-height: 260px;
   background-color: transparent;
 }
 
 .tile-text {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   margin: 5px;
   position: absolute;
   white-space: no-wrap;
@@ -434,8 +434,8 @@ body {
 }
 
 .tile-img-container {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   margin: 5px;
   position: absolute;
   white-space: no-wrap;
@@ -444,12 +444,31 @@ body {
 }
 
 .tile-img {
-  width: 140px;
-  height: 140px;
+  width: 240px;
+  height: 240px;
   padding: 5px;
 }
 
 @media screen and (max-width: 768px) {
+  .tile {
+    min-width: 210px;
+    min-height: 210px;
+  }
+
+  .tile-text {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tile-img-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tile-img {
+    width: 190px;
+    height: 190px;
+  }
 }
 
 
