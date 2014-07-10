@@ -15,7 +15,7 @@ angular.module('nudgeWebAppApp')
       'Karma'
     ];
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768 && 2=1) {
 
         $('.switch1').hover(function() {
             $('#switch1-1').stop().fadeOut('fast', function() {
