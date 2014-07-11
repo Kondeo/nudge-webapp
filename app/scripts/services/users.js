@@ -12,3 +12,18 @@ angular.module('nudgeWebAppApp')
         } );
 
 }]);
+
+angular.module('nudgeWebAppApp')
+  .factory('Join', ['$resource', function($resource) {
+
+    return $resource( apiBase + 'join', 
+        { }, { 
+            submit: { 
+                method: 'POST', 
+                params: {}, 
+                isArray: false 
+            }
+            
+        } );
+
+}]);
