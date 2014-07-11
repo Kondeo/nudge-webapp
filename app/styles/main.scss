@@ -416,7 +416,7 @@ body {
   display: inline-block;
   white-space: no-wrap;
   overflow: hidden;
-  color: white;
+  color: #56799c;
   min-width: 310px;
   min-height: 310px;
   background-color: transparent;
@@ -431,6 +431,10 @@ body {
   overflow: hidden;
   border-radius: 4px;
   background-color: rgba(7,7,22,.7);
+}
+
+.tile-text h3 {
+  color: white;
 }
 
 .tile-img-container {
