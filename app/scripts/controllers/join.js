@@ -28,8 +28,8 @@ angular.module('nudgeWebAppApp')
             "address2": $scope.join.add2,
             "city": $scope.join.city,
             "state": $scope.join.state,
-            "zip": $scope.join.zip
-            "profile": " "
+            "zip": $scope.join.zip,
+            "profile": ""
         }
 
         $scope.joinfinish = Join.submit(joinjson, function(){
