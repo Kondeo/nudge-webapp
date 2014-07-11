@@ -105,6 +105,14 @@ body {
   border-bottom: 1px solid #777;
 }
 
+.nudgelogo {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
 /* Footer Section */
 
 .l-footer {
@@ -136,7 +144,10 @@ body {
 }
 
 .navbar-brand {
-  color: $nudge-blue !important;
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  color: $alazarin !important;
 }
 
 .navbar-right {
@@ -299,7 +310,7 @@ body {
   height: 50px;
   width: 50px;
   background-color: transparent;
-  color: $nudge-blue !important;
+  color: $alazarin !important;
   padding-bottom: 8px;
 }
 
@@ -310,7 +321,7 @@ body {
   font-size: 20px;
   border: none !important;
   color: white;
-  background-color: $nudge-blue;
+  background-color: $alazarin;
 }
 
 .j-join {
@@ -320,16 +331,17 @@ body {
   font-size: 20px;
   border: none !important;
   color: white;
-  background-color: $nudge-blue;
+  background-color: $alazarin;
 }
 
 .mobile-nav-button {
+  float: right !important;
   border: none;
   margin-right: 5px;
 }
 
 .mobile-nav-butt-bar {
-  background-color: $nudge-blue !important;
+  background-color: $alazarin !important;
 }
 
 .button-login:hover {
