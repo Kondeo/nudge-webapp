@@ -35,7 +35,7 @@ angular.module('nudgeWebAppApp')
         $scope.joinfinish = Join.submit(joinjson, function(){
 
             if (!$scope.joinfinish.result) {
-                alert("Sorry, that isn't the correct username and password.");
+                alert("Sorry, please fill in all the required fields.");
             } else {                
                 
                 document.cookie = "session_token=" + $scope.joinfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
