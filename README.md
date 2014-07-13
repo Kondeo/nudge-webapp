@@ -35,3 +35,9 @@ Possible dimming of tiles around the tile that is being hovered on? Creating a n
 Definitely some form of filter for finding things near you that uses larger tile to display toggles
 single tiles + double tiles
   -not sure how to display information in a simple manner to fit tile theme
+  
+-----------
+
+Colors:
+
+I think we need to get some outside opinions on color options. We would need to make some form of survey to see which colors people look for in a website or app of this nature that would be for the purpose we have. --Jacob
