@@ -41,3 +41,8 @@ single tiles + double tiles
 Colors:
 
 I think we need to get some outside opinions on color options. We would need to make some form of survey to see which colors people look for in a website or app of this nature that would be for the purpose we have. --Jacob
+
+
+------------
+
+WOOT 100th COMMIT!!! This seems rather momentous. I feel like we should celebrate. I am still working on the survey and am trying to plan ahead for what needs to be done in the coming week. If all goes well we can bust this out and get some working pre-alpha profiles just so we can mess around and figure out what needs tweaking. Hopefully all goes well.
