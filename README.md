@@ -40,8 +40,7 @@ single tiles + double tiles
 
 Colors:
 
-I think we need to get some outside opinions on color options. We would need to make some form of survey to see which colors people look for in a website or app of this nature that would be for the purpose we have. --Jacob
-
+in comment
 
 ------------
 
