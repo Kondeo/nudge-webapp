@@ -20,6 +20,7 @@ body {
   padding-bottom: 20px;
   font-family: $font;
   text-rendering: optimizeLegibility;
+  background-image: url('/images/billie_holiday.png');
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -137,10 +138,18 @@ body {
   }
 }
 
+.container {
+  margin-top: 50px;
+}
+
 .navbar-default {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
   border: none;
   border-radius: 0px;
-  background-color: #333;
+  background-color: rgba(255,255,255,0.85);
 }
 
 .navbar-brand {
@@ -195,7 +204,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 4px;
-  background-image: url('/images/billie_holiday.png');
+  background-color: rgba(255,255,255,0.85);
 }
 
 .j-back {
@@ -203,7 +212,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 4px;
-  background-image: url('/images/billie_holiday.png');
+  background-color: rgba(255,255,255,0.85);
 }
 
 
@@ -288,7 +297,7 @@ body {
   height: 50px;
   width: 75px;
   background-color: transparent;
-  color: white !important;
+  color: $alazarin !important;
 }
 
 .button-join {
@@ -298,7 +307,7 @@ body {
   height: 50px;
   width: 75px;
   background-color: transparent;
-  color: white !important;
+  color: $alazarin !important;
 }
 
 .glyphicon-th-large {
