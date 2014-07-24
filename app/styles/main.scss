@@ -16,11 +16,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 /* Space out content a bit */
 body {
-  padding-top: 0px;
+  padding-top: 10px;
   padding-bottom: 20px;
   font-family: $font;
   text-rendering: optimizeLegibility;
+}
+
+.background {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
   background-image: url('/images/billie_holiday.png');
+  z-index: -1;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -212,7 +220,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 4px;
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.8);
 }
 
 
