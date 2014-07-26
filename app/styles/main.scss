@@ -220,7 +220,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 4px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.85);
 }
 
 
@@ -445,7 +445,7 @@ body {
   display: inline-block;
   white-space: no-wrap;
   overflow: hidden;
-  color: #56799c;
+  color: $nudge-grey;
   min-width: 310px;
   min-height: 310px;
   background-color: transparent;
@@ -459,7 +459,8 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
-  background-color: rgba(7,7,22,.7);
+  background-color: rgba(68,68,68,0.7);
+  z-index: -1;
 }
 
 .tile-text h3 {
@@ -474,6 +475,7 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
+  z-index: -1;
 }
 
 .tile-img {
