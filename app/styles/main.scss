@@ -16,7 +16,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 /* Space out content a bit */
 body {
-  padding-top: 10px;
+  padding-top: 25px;
   padding-bottom: 20px;
   font-family: $font;
   text-rendering: optimizeLegibility;
@@ -174,7 +174,7 @@ body {
 }
 
 .mobile-nav {
-  border: none;
+  border-top: 2px solid #444;
 }
 
 .login-container {
