@@ -27,7 +27,7 @@ body {
   top: 0px;
   height: 100%;
   width: 100%;
-  background-image: url('/images/billie_holiday.png');
+  background-image: url('/images/tweed.png');
   z-index: -1;
 }
 
@@ -164,6 +164,8 @@ body {
   height: 50px;
   width: 50px;
   padding: 0px;
+  margin-top: -12px;
+  padding-left: 12px;
   color: $alazarin !important;
 }
 
