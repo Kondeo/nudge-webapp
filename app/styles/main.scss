@@ -191,6 +191,7 @@ body {
 @media screen and (max-width: 768px) {
   .login-container {
     width: 90%;
+    border-top: none !important;
   }
 }
 
@@ -438,6 +439,7 @@ body {
 }
 
 .tile-container {
+  color: rgba(255,255,255,0.95);
   text-align: center;
   width: 100%;
 }
@@ -448,25 +450,27 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   color: $nudge-grey;
-  min-width: 310px;
-  min-height: 310px;
+  min-width: 397px;
+  min-height: 164px;
   background-color: transparent;
 }
 
 .tile-text {
-  width: 290px;
-  height: 290px;
+  width: 377px;
+  height: 144px;
   margin: 10px;
   position: absolute;
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
+  color: rgba(255,255,255,0.95);
   background-color: rgba(68,68,68,0.7);
   z-index: -1;
 }
 
 .tile-text h3 {
-  color: white;
+
+  color: $alazarin;
 }
 
 .tile-img-container {
@@ -488,13 +492,13 @@ body {
 
 @media screen and (max-width: 890px) {
   .tile {
-    min-width: 260px;
-    min-height: 260px;
+    min-width: 397px;
+    min-height: 164px;
   }
 
   .tile-text {
-    width: 240px;
-    height: 240px;
+    width: 377px;
+    height: 144px;
   }
 
   .tile-img-container {
@@ -508,15 +512,15 @@ body {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   .tile {
-    min-width: 210px;
-    min-height: 210px;
+    min-width: 253px;
+    min-height: 164px;
   }
 
   .tile-text {
-    width: 190px;
-    height: 190px;
+    width: 233px;
+    height: 144px;
   }
 
   .tile-img-container {
