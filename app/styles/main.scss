@@ -42,8 +42,8 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  color: $nudge-grey;
+  border-top: 1px solid $nudge-grey;
 }
 
 .container-narrow > hr {
@@ -157,16 +157,22 @@ body {
   top: 0px;
   border: none;
   border-radius: 0px;
-  background-color: rgba(255,255,255,0.95);
+  background-color: white;
 }
 
 .navbar-brand {
   height: 50px;
   width: 50px;
   padding: 0px;
-  margin-top: -12px;
+  margin-top: -14px;
   padding-left: 12px;
   color: $alazarin !important;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    border-top: none !important;
+  }
 }
 
 .navbar-right {
@@ -463,7 +469,7 @@ body {
   white-space: no-wrap;
   overflow: hidden;
   border-radius: 4px;
-  color: rgba(255,255,255,0.95);
+  color: $nudge-grey;
   background-color: rgba(68,68,68,0.7);
   z-index: -1;
 }
