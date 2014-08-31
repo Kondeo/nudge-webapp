@@ -33,6 +33,18 @@ angular
         templateUrl: 'views/join.html',
         /**controller: 'JoinCtrl'**/
       })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        //controller: 'AboutCtrl'
+      })
+      .when('/friends', {
+        templateUrl: 'views/friends.html',
+        //controller: 'AboutCtrl'
+      })
+      .when('/feed', {
+        templateUrl: 'views/feed.html',
+        //controller: 'AboutCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'

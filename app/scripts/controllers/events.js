@@ -1,0 +1,1 @@
+//Will hold events page javascript

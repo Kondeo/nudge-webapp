@@ -1,0 +1,1 @@
+//Will hold friends page javascript
