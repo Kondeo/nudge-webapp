@@ -20,10 +20,8 @@ angular.module('nudgeWebAppApp')
         var joinjson = { 
             "username": $scope.join.username,
             "password": $scope.join.password,
-            "firstname": $scope.join.first,
-            "lastname": $scope.join.last,
+            "name": $scope.join.name,
             "phone": $scope.join.email,
-            "email": $scope.join.phone,
             "address1": $scope.join.add1,
             "address2": $scope.join.add2,
             "city": $scope.join.city,
