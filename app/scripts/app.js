@@ -27,11 +27,11 @@ angular
       })
       .when('/login', {
         templateUrl: 'views/login.html',
-        /**controller: 'LoginCtrl'**/
+        controller: 'LoginCtrl'
       })
       .when('/join', {
         templateUrl: 'views/join.html',
-        /**controller: 'JoinCtrl'**/
+        controller: 'JoinCtrl'
       })
       .when('/events', {
         templateUrl: 'views/events.html',
