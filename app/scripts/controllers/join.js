@@ -8,7 +8,7 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('JoinCtrl', function ($scope) {
+  .controller('JoinCtrl', function ($scope, Join) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -20,8 +20,8 @@ angular.module('nudgeWebAppApp')
         var joinjson = { 
             "username": $scope.join.username,
             "password": $scope.join.password,
-            "name": $scope.join.name,
-            "phone": $scope.join.email,
+            "name": $scope.join.fullname,
+            "phone": $scope.join.phone,
             "address1": $scope.join.add1,
             "address2": $scope.join.add2,
             "city": $scope.join.city,
