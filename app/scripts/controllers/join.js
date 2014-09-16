@@ -22,6 +22,11 @@ angular.module('nudgeWebAppApp')
 
     $scope.submit = function(){
 
+        if(!$scope.join.username || !$scope.join.password || $scope.join.fullname){
+            alert("Please fill out required fields.");
+            return;
+        }
+
         var joinjson = { 
             "username": $scope.join.username,
             "password": $scope.join.password,
