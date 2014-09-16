@@ -57,6 +57,10 @@ angular
         templateUrl: 'views/friends.html',
         /*controller: 'AboutCtrl'*/
       })
+      .when('/welcome', {
+        templateUrl: 'views/welcome.html',
+        /*controller: 'AboutCtrl'*/
+      })
       .otherwise({
         redirectTo: '/'
       });
