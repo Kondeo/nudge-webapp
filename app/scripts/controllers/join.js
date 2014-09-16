@@ -15,6 +15,11 @@ angular.module('nudgeWebAppApp')
       'Karma'
     ];
 
+    $scope.go = function(requrl){
+        console.log("url switch for " + requrl);
+        $location.url(requrl);
+    }
+
     $scope.submit = function(){
 
         var joinjson = { 
@@ -38,7 +43,7 @@ angular.module('nudgeWebAppApp')
 
                 document.cookie = "session_token=" + $scope.joinfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
 
-                //$scope.go("/#/");
+                $scope.go("/#/");
 
             }
 
