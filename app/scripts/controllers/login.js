@@ -17,6 +17,11 @@ angular.module('nudgeWebAppApp')
 
     $scope.submit = function(){
 
+        if(!$scope.login.username || !$scope.login.password){
+          alert("Please fill out all fields");
+          return;
+        }
+
         var loginjson = { 
             "username": $scope.login.username,
             "password": $scope.login.password
