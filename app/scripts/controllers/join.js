@@ -32,13 +32,13 @@ angular.module('nudgeWebAppApp')
 
         $scope.joinfinish = Join.submit(joinjson, function(){
 
-            if (!$scope.joinfinish.result) {
-                alert("Sorry, please fill in all the required fields.");
-            } else {                
-                
+            if ($scope.joinfinish.error) {
+                alert("Sorry, that username is taken.");
+            } else if ($scope.joinfinish.result.session_token) {                
+
                 document.cookie = "session_token=" + $scope.joinfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
 
-                $scope.go("/#/");
+                //$scope.go("/#/");
 
             }
 
