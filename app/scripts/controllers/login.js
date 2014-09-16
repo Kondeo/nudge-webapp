@@ -15,6 +15,11 @@ angular.module('nudgeWebAppApp')
       'Karma'
     ];
 
+    $scope.go = function(requrl){
+        console.log("url switch for " + requrl);
+        $location.url(requrl);
+    }
+
     $scope.submit = function(){
 
         if(!$scope.login.username || !$scope.login.password){
