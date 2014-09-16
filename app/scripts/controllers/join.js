@@ -8,7 +8,7 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('JoinCtrl', function ($scope, Join) {
+  .controller('JoinCtrl', function ($scope, Join, $location, $rootElement) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

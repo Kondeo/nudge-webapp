@@ -8,7 +8,7 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('LoginCtrl', function ($scope, Login) {
+  .controller('LoginCtrl', function ($scope, Login, $location, $rootElement) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
