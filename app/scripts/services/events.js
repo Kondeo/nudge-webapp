@@ -34,3 +34,18 @@ angular.module('nudgeWebAppApp')
         } );
 
 }]);
+
+angular.module('nudgeWebAppApp')
+  .factory('MyEvents', ['$resource', function($resource) {
+
+    return $resource( apiBase + 'events/my', 
+        { Id: '@Id' }, { 
+            get: { 
+                method: 'POST', 
+                params: {}, 
+                isArray: false 
+            }
+            
+        } );
+
+}]);
