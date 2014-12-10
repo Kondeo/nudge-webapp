@@ -8,12 +8,17 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('MainCtrl', function ($scope, Events) {
+  .controller('MainCtrl', function ($scope, Events, $location, $rootElement) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.go = function(requrl){
+        console.log("url switch for " + requrl);
+        $location.url(requrl);
+    }
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         //alert("You device are mobile is");
@@ -41,6 +46,10 @@ angular.module('nudgeWebAppApp')
         });
 
     };
+
+    if (!(document.cookie.indexOf("session_token") >= 0)) {
+        $scope.go("/welcome");
+    }
 
     $scope.events = Events.query();
 
