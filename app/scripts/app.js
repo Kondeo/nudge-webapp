@@ -1,6 +1,6 @@
 'use strict';
 
-var apiBase = 'http://1808e9d5.ngrok.com/';
+var apiBase = 'http://127.0.0.1:8888/';
 
 /**
  * @ngdoc overview
