@@ -34,14 +34,13 @@
 
   </div>
   <h2>My Friends</h2><br />
-  <div class="tile switch3" onclick="location.href='/#/feed'">
-    
+  <div ng-repeat="friend in friends" class="tile switch3 animate-repeat" onclick="location.href='/#/feed'">
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
     <div class="tile-text" id="switch3-2">
       <h3>This is a friend</h3>
-      
+      {{friends}}
     </div>
 
   </div>
