@@ -20,6 +20,8 @@ angular.module('nudgeWebAppApp')
         $location.url(requrl);
     }
 
+    $scope.token = getCookie("session_token");
+
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         //alert("You device are mobile is");
         $('.switch1').delay(1000).animate({ color: '#ffffff' }, 'slow');
@@ -54,3 +56,14 @@ angular.module('nudgeWebAppApp')
     $scope.events = Events.query();
 
   });
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+}
