@@ -11,7 +11,7 @@
     </div>
 
   </div>
-  <div class="tile switch2" onclick="location.href='/#/events'">
+  <div class="tile switch2" onclick="location.href='/#/events'" ng-if="friends.requestme">
 
     <div class="tile-img-container" id="switch2-1">
       <!--<img class="tile-img" src="images/clink.png"/>-->
@@ -22,7 +22,7 @@
     </div>
 
   </div>
-  <div class="tile switch3" onclick="location.href='/#/feed'">
+  <div class="tile switch3" onclick="location.href='/#/feed'" ng-if="friends.requested">
     
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
@@ -33,14 +33,14 @@
     </div>
 
   </div>
-  <h2>My Friends</h2><br />
-  <div ng-repeat="friend in friends" class="tile switch3 animate-repeat" onclick="location.href='/#/feed'">
+  <h2 ng-if="friends.friends">Current Friends</h2><br />
+  <div ng-if="friends.friends" ng-repeat="friend in friends.friends" class="tile switch3 animate-repeat" onclick="location.href='/#/feed'">
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
     <div class="tile-text" id="switch3-2">
-      <h3>This is a friend</h3>
-      {{friends}}
+      <h3>{{friend.name}}</h3>
+      {{friend.username}}
     </div>
 
   </div>
