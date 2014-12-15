@@ -38,7 +38,7 @@ angular.module('nudgeWebAppApp')
 angular.module('nudgeWebAppApp')
   .factory('MyEvents', ['$resource', function($resource) {
 
-    return $resource( apiBase + 'events/my', 
+    return $resource( apiBase + 'events/me', 
         { Id: '@Id' }, { 
             get: { 
                 method: 'POST', 
