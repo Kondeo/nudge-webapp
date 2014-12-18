@@ -43,7 +43,7 @@ angular.module('nudgeWebAppApp')
             get: { 
                 method: 'POST', 
                 params: {}, 
-                isArray: false 
+                isArray: true 
             }
             
         } );
