@@ -37,6 +37,10 @@ angular
         templateUrl: 'views/events.html',
         //controller: 'AboutCtrl'
       })
+      .when('/event/:eventid', {
+        templateUrl: 'views/eventdetails.html',
+        controller: 'EventDetailsCtrl'
+      })
       .when('/events/me', {
         templateUrl: 'views/myevents.html',
         controller: 'MyEventsCtrl'
