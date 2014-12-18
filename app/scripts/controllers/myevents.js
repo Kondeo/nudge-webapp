@@ -8,7 +8,7 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('MyEventsCtrl', function ($scope, Friends, $location, $rootElement) {
+  .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
