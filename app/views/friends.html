@@ -33,11 +33,11 @@
 
   </div>
   <h2 ng-if="friends.friends" class="animate-if">Current Friends</h2><br />
-  <div ng-if="friends.friends" ng-repeat="friend in friends.friends" class="tile switch3 animate-repeat" onclick="location.href='/#/feed'">
+  <div ng-if="friends.friends" ng-repeat="friend in friends.friends" class="tile switch3 animate-repeat">
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
-    <div class="tile-text" id="switch3-2">
+    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{friend.id}}')">
       <h3>{{friend.name}}</h3>
       {{friend.username}}
     </div>
