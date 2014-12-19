@@ -27,3 +27,28 @@ angular.module('nudgeWebAppApp')
         } );
 
 }]);
+
+angular.module('nudgeWebAppApp')
+  .factory('User', ['$resource', function($resource) {
+
+    return $resource( apiBase + 'user/:Id', 
+        { Id: '@Id' }, { 
+            delete: { 
+                method: 'DELETE', 
+                params: { Id: '' }, 
+                isArray: false 
+            },
+            update: { 
+                method: 'PUT', 
+                params: { Id: '' }, 
+                isArray: false 
+            },
+            get: { 
+                method: 'GET', 
+                params: { Id: '@Id' },
+                isArray: false 
+            }
+            
+        } );
+
+}]);
