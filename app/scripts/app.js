@@ -49,6 +49,10 @@ angular
         templateUrl: 'views/friends.html',
         controller: 'FriendsCtrl'
       })
+      .when('/friend/:friendid', {
+        templateUrl: 'views/frienddetails.html',
+        controller: 'FriendDetailsCtrl'
+      })
       .when('/feed', {
         templateUrl: 'views/feed.html',
         //controller: 'AboutCtrl'
