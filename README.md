@@ -9,50 +9,50 @@ The frontend of nudge connects to the backend for any functionality past static 
 
 --------------
 
-MVP FUNCTIONALITY --
-(sorted by priority):   > for todo, x for complete
+<b>MVP Functionality</b><br />
+Sorted by priority<br />
+Italics for complete.
 
-> Accounts:
-	> Register
-	> Login
-	> Profile
-	> Edit
-	> Delete
-	> Ratings/Reviews
-> Events
-	> Create
-	> Edit
-	> Delete
-	> Basic search
-	> RSVP
-		> Accept
-		> Decline
+> Accounts<br />
+	> Register<br />
+	> Login<br />
+	> Profile<br />
+	> Edit<br />
+	> Delete<br />
+	> Ratings/Reviews<br />
+> Events<br />
+	> Create<br />
+	> Edit<br />
+	> Delete<br />
+	> Basic search<br />
+	> RSVP<br />
+		> Accept<br />
+		> Decline<br />
 
 -------------
 
-RELEASE FUNCTIONALITY --
-(not a complete list, still in creation):
+<b>Release Functionality</b><br />
+Incomplete list.
 
-Release:
-> Notifications work
-> Can add friends
-> Can see what friends are attending
-> Can categorize events
-> Can view events based on their category
+> Notifications work<br />
+> Can add friends<br />
+> Can see what friends are attending<br />
+> Can categorize events<br />
+> Can view events based on their category<br />
 > Can search events based on their category
 
   
 -----------
 
-Team: 
+<b>Team</b><br /> 
 
-Jacob > Design
-Aaron > Frontend dev
+Jacob > Design<br />
+Aaron > Frontend dev<br />
 Julian > Backend dev
 
 -----------
 
-Ideas:
+<b>Ideas</b>
 
 Interactive tiles that have clickable titles or interactive content.
 Tile areas that contain different tiles that are alike in type.
