@@ -1,24 +1,54 @@
 nudge-webapp
 ============
 
-Nudge WebApp
+Frontend for Nudge-Backend (http://github.com/kondeo/nudge-backend)
 
+The frontend of nudge is programmed in JavaScript using the AngularJS framework. You will need fully working Node.JS (nodejs.org) installed on your machine, and the ability to execute "grunt serve".
 
-MVP (sorted by priority):
-. User accounts work, Register, Login, Profile page, Edit, Delete
-. Events can be hosted by user, Edit and Delete work
-. Basic search of events works
-. Users can request an RSVP to events and hosts can accept or decline that request
-. User ratings and profile ranking works. users can rank eachother as long as they have attended the same party
+The frontend of nudge connects to the backend for any functionality past static screens. Currently, without the backend you cannot get past the login gateway.
 
+--------------
+
+MVP FUNCTIONALITY --
+(sorted by priority):   > for todo, x for complete
+
+> Accounts:
+	> Register
+	> Login
+	> Profile
+	> Edit
+	> Delete
+	> Ratings/Reviews
+> Events
+	> Create
+	> Edit
+	> Delete
+	> Basic search
+	> RSVP
+		> Accept
+		> Decline
+
+-------------
+
+RELEASE FUNCTIONALITY --
+(not a complete list, still in creation):
 
 Release:
-. Notifications work
-. Can add friends
-. Can see what friends are attending
-. Can categorize events
-. Can view events based on their category
-. Can search events based on their category
+> Notifications work
+> Can add friends
+> Can see what friends are attending
+> Can categorize events
+> Can view events based on their category
+> Can search events based on their category
+
+  
+-----------
+
+Team: 
+
+Jacob > Design
+Aaron > Frontend dev
+Julian > Backend dev
 
 -----------
 
@@ -35,13 +65,8 @@ Possible dimming of tiles around the tile that is being hovered on? Creating a n
 Definitely some form of filter for finding things near you that uses larger tile to display toggles
 single tiles + double tiles
   -not sure how to display information in a simple manner to fit tile theme
-  
+
+Users can request an RSVP to events and hosts can accept or decline that request
+User ratings and profile ranking. users can rank eachother as long as they have attended the same party
+
 -----------
-
-Colors:
-
-in comment
-
-------------
-
-WOOT 100th COMMIT!!! This seems rather momentous. I feel like we should celebrate. I am still working on the survey and am trying to plan ahead for what needs to be done in the coming week. If all goes well we can bust this out and get some working pre-alpha profiles just so we can mess around and figure out what needs tweaking. Hopefully all goes well.
