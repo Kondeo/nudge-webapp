@@ -27,6 +27,12 @@ angular.module('nudgeWebAppApp')
             return;
         }
 
+        if($scope.join.password != $scope.join.confirmpassword)
+        {
+            alert('"Password" and "Confrim Password" do not match! Please enter the Password in both fields.');
+            return;
+        }
+
         var joinjson = { 
             "username": $scope.join.username,
             "password": $scope.join.password,
