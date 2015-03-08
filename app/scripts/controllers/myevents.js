@@ -9,12 +9,7 @@
  */
 angular.module('nudgeWebAppApp')
   .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
+    
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
         $location.path(requrl);
