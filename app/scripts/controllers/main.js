@@ -17,7 +17,7 @@ angular.module('nudgeWebAppApp')
 
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
-        $location.url(requrl);
+        $location.path(requrl);
     }
 
     $scope.token = getCookie("session_token");
