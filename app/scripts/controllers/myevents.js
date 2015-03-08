@@ -1,44 +1,25 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for personal events page
+ * Gets all events for the current user from server
  */
 angular.module('nudgeWebAppApp')
   .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
+    
+    //Redirects to desired local url
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
         $location.path(requrl);
     }
 
+    //Get session token
     var session_token = getCookie("session_token");
-
+    //Initialize submission json
     var submitjson = {};
-
+    //Add session token to json
     submitjson.session_token = session_token;
-
+    //Submit json to server and store result in scope variable
     $scope.events = MyEvents.get(submitjson);
 
-    function getCookie(cname) {
-	    var name = cname + "=";
-	    var ca = document.cookie.split(';');
-	    for(var i=0; i<ca.length; i++) {
-	        var c = ca[i];
-	        while (c.charAt(0)==' ') c = c.substring(1);
-	        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-	    }
-	    return "";
-	}
-
-
   });
-
