@@ -1,11 +1,8 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for main site page
+ * If user doesnt have a session cookie, redirects to welcome page
  */
 angular.module('nudgeWebAppApp')
   .controller('MainCtrl', function ($scope, Events, $location, $rootElement) {

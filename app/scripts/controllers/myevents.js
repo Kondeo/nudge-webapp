@@ -1,11 +1,8 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for personal events page
+ * Gets all events for the current user from server
  */
 angular.module('nudgeWebAppApp')
   .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {

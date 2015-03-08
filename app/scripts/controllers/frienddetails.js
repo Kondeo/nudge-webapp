@@ -1,11 +1,8 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for friend details
+ * Code retrieves details for a specific friend ID
  */
 angular.module('nudgeWebAppApp')
   .controller('FriendDetailsCtrl', function ($scope, User, $location, $rootElement, $routeParams) {

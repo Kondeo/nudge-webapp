@@ -1,11 +1,10 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for the login page
+ * Code checks input for login form with account info from server
+ * Stores session cookie for user
+ * Redirects to main site
  */
 angular.module('nudgeWebAppApp')
   .controller('LoginCtrl', function ($scope, Login, $location, $rootElement) {

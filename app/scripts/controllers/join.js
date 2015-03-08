@@ -1,11 +1,10 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:JoinCtrl
- * @description
- * # JoinCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for the join page
+ * Checks join form validity
+ * Submits new user data to the server
+ * Stores session cookie for the user
  */
 angular.module('nudgeWebAppApp')
   .controller('JoinCtrl', function ($scope, Join, $location, $rootElement) {

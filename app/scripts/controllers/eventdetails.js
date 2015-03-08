@@ -1,11 +1,8 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name nudgeWebAppApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Controller of the nudgeWebAppApp
+ * JavaScript for event details.
+ * Gets the details for a provided event ID
  */
 angular.module('nudgeWebAppApp')
   .controller('EventDetailsCtrl', function ($scope, Events, $location, $rootElement, $routeParams) {
