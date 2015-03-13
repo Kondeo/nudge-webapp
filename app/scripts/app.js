@@ -29,6 +29,10 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/logout', {
+        templateUrl: 'views/logout.html',
+        controller: 'LogoutCtrl'
+      })
       .when('/join', {
         templateUrl: 'views/join.html',
         controller: 'JoinCtrl'
