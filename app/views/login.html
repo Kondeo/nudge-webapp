@@ -1,10 +1,10 @@
 <div class="login-container">
 	<div class="l-back">
 		<h2 class="l-head">Login</h2>
-		<form class="l-form">
+		<form ng-submit="submit()" class="l-form">
 			<input type="email" class="l-username" placeholder="E-mail" ng-model="login.username"></input><br />
 			<input type="password" class="l-password" placeholder="Password" ng-model="login.password"></input><br />
-			<button class="btn l-login" ng-click="submit()">Login</button>
+			<button class="btn l-login">Login</button>
 		</form>
 		<div class="j-footer"><span style="color: #444;">Don't have an account? </span><a href="/#/join">Join Here</a><span style="color: #444">.</span></div></span>
 	</div>
