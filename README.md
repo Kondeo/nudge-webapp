@@ -14,10 +14,14 @@ Sorted by priority<br />
 Italics for complete.
 
 > Accounts<br />
-	> Register<br />
-	> Login<br />
+	> <i>Register</i><br />
+	> <i>Login</i><br />
 	> Profile<br />
 	> Edit<br />
+	> Add Friends<br />
+	> Remove Friends<br />
+	> Accept Friends<br />
+	> Deny Friends<br />
 	> Delete<br />
 	> Ratings/Reviews<br />
 > Events<br />
@@ -35,7 +39,6 @@ Italics for complete.
 Incomplete list.
 
 > Notifications work<br />
-> Can add friends<br />
 > Can see what friends are attending<br />
 > Can categorize events<br />
 > Can view events based on their category<br />
