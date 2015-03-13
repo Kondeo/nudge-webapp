@@ -47,11 +47,12 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse mobile-nav" id="bs-example-navbar-collapse-1">
+        <div ng-controller="navController" class="collapse navbar-collapse mobile-nav" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
           <a href="/#/"><button class="btn button-home glyphicon glyphicon-th-large"></button></a>
-          <a href="/#/join"><button class="btn button-join">JOIN</button></a>
-          <a href="/#/login"><button class="btn button-login">LOGIN</button></a>
+          <a href="/#/join"><button ng-hide="isLoggedIn" class="btn button-join">JOIN</button></a>
+          <a href="/#/login"><button ng-hide="isLoggedIn" class="btn button-login">LOGIN</button></a>
+          <a href="/#/logout"><button ng-show="isLoggedIn" class="btn button-logout">LOGOUT</button></a>
           
             <!-- <li><a href="#">Link</a></li>
             <li><a href="#/about">Link</a></li> -->
@@ -117,6 +118,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/navcontroller.js"></script>
         <script src="scripts/controllers/join.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/about.js"></script>
