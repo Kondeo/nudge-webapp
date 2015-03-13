@@ -20,6 +20,6 @@ angular.module('nudgeWebAppApp')
     //Get url parameter for ID, and add it to the json
     submitjson.Id = $routeParams.eventid;
     //Send the json data to the server and store the result in scope variable
-    $scope.eventdetails = Events.get(submitjson);
+    $scope.eventdetails = Events.get(submitjson, catchError);
 
   });

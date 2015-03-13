@@ -60,7 +60,11 @@ angular.module('nudgeWebAppApp')
 
             }
 
-        });
+
+        },
+        //To catch Errors when trying to join while the server
+        //Or backend is down
+        catchError);
     }
 
   });
