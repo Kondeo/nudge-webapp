@@ -7,7 +7,7 @@
  * Sends the user to the new event page
  */
 angular.module('nudgeWebAppApp')
-  .controller('EventCreateCtrl', function ($scope, Join, $location, $rootElement) {
+  .controller('EventCreateCtrl', function ($scope, Events, $location, $rootElement) {
 
     //Redirects to desired local url
     $scope.go = function(requrl){
@@ -28,9 +28,9 @@ angular.module('nudgeWebAppApp')
         var serverJson = { 
             "name": $scope.newEvent.name,
             "start_time": $scope.newEvent.start,
-            "end_time": $scope.join.end,
-            "public": $scope.join.publicity,
-            "category": $scope.join.category
+            "end_time": $scope.newEvent.end,
+            "public": $scope.newEvent.publicity,
+            "category": $scope.newEvent.category
         }
 
         //Submit json, and store the server response in scope variable
