@@ -23,3 +23,14 @@ function getCookie(cname) {
                 alert("Server is not up! " + responseString);
             }
         }
+
+//Function to check login cookie so we may display logout in header
+function isLoggedIn(){
+    if(getCookie("session_token")){
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
