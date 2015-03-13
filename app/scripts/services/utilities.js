@@ -22,14 +22,4 @@ function getCookie(cname) {
                 //Now alert it(Under master julian's request)
                 alert("Server is not up! " + responseString);
             }
-            else
-            {
-                //Show the error to the user
-                 //Create a string with Response
-                var responseString = "Response is: " + response.status;
-                //Log our response status
-                console.log(responseString);
-                //Now alert it(Under master julian's request)
-                alert("There was an error! Error code: " + responseString);
-            }
         }
