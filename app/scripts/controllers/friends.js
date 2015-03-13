@@ -20,6 +20,6 @@ angular.module('nudgeWebAppApp')
     //Add session token to json
     submitjson.session_token = session_token;
     //Submit json to server and store result in scope variable
-    $scope.friends = Friends.query(submitjson);
+    $scope.friends = Friends.query(submitjson, catchError);
 
   });

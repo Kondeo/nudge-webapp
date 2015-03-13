@@ -21,6 +21,6 @@ angular.module('nudgeWebAppApp')
     submitjson.session_token = session_token;
     submitjson.Id = $routeParams.friendid;
     //Send json to server and store response in scope variable
-    $scope.frienddetails = User.get(submitjson);
+    $scope.frienddetails = User.get(submitjson, catchError);
 
   });

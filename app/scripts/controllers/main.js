@@ -20,6 +20,6 @@ angular.module('nudgeWebAppApp')
         $scope.go("/welcome");
     }
 
-    $scope.events = Events.query();
+    $scope.events = Events.query(catchError);
 
   });
