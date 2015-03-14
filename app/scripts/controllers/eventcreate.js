@@ -21,11 +21,15 @@ angular.module('nudgeWebAppApp')
         publicity: 'false'
       };
 
+    //Get session token
+    $scope.token = getCookie("session_token");
+
     //Form submission function
     $scope.submit = function(){
 
         //Create json from form data
         var serverJson = { 
+            "session_token": $scope.token,
             "name": $scope.newEvent.name,
             "start_time": $scope.newEvent.start,
             "end_time": $scope.newEvent.end,
