@@ -44,9 +44,9 @@ angular.module('nudgeWebAppApp')
                 alert("There was an error!");
             } 
             //If the server responded with an ID, that is the event ID
-            else if ($scope.serverResponse.result.id) {                
+            else if ($scope.serverResponse.id) {                
                 //Take the user to the page for the event that was just created
-                $scope.go("/event/" + $scope.serverResponse.result.id);
+                $scope.go("/event/" + $scope.serverResponse.id);
 
             }
 
