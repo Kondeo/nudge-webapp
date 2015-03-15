@@ -10,10 +10,7 @@ angular.module('nudgeWebAppApp')
   .controller('JoinCtrl', function ($scope, Join, $location, $rootElement) {
 
     //Redirects to desired local url
-    $scope.go = function(requrl){
-        console.log("url switch for " + requrl);
-        $location.path(requrl);
-    }
+    $scope.go = go;
 
     //Form submission function
     $scope.submit = function(){
