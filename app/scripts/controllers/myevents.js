@@ -7,12 +7,6 @@
 angular.module('nudgeWebAppApp')
   .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {
     
-    //Redirects to desired local url
-    $scope.go = function(requrl){
-        console.log("url switch for " + requrl);
-        $location.path(requrl);
-    }
-
     //Get session token
     var session_token = getCookie("session_token");
     //Initialize submission json
