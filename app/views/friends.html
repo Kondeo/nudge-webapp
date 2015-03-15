@@ -4,12 +4,26 @@
 
     <div class="tile-text" id="switch1-2">
       <h3>Search</h3>
-      <form>
-          <input type="text" placeholder="Enter a name">
+      <form ng-submit="searchSubmit()">
+          <input ng-model="searchField" type="text" placeholder="Search for...">
       </form>
     </div>
 
   </div>
+
+
+  <h2 ng-if="search.result" class="animate-if">Search Results</h2><br />
+  <div ng-if="search.result" ng-repeat="profile in search.result" class="tile switch3 animate-repeat">
+    <div class="tile-img-container" id="switch3-1">
+    </div>
+    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{profile.id}}')">
+      <h3>{{profile.name}}</h3>
+      {{profile.username}}
+    </div>
+
+  </div>
+
+
   <div class="tile switch2 animate-if" onclick="location.href='/#/events'" ng-if="friends.requestme">
 
     <div class="tile-img-container" id="switch2-1">
@@ -21,6 +35,8 @@
     </div>
 
   </div>
+
+
   <div class="tile switch3 animate-if" onclick="location.href='/#/feed'" ng-if="friends.requested">
     
     <div class="tile-img-container" id="switch3-1">
@@ -32,6 +48,8 @@
     </div>
 
   </div>
+
+
   <h2 ng-if="friends.friends" class="animate-if">Current Friends</h2><br />
   <div ng-if="friends.friends" ng-repeat="friend in friends.friends" class="tile switch3 animate-repeat">
     <div class="tile-img-container" id="switch3-1">
