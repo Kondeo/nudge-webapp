@@ -32,7 +32,13 @@
 				{{userdetails.profile}} <br /> <br />
 			</div>
 			<br />
-	      	<button class="btn j-join" ng-click="addFriend()">Add Friend</button>
+	      	<button class="btn j-join" ng-click="addFriend()" ng-if="userdetails.friend_status == 0">Add Friend</button>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 1">
+				Friend Request Pending <br /> <br />
+			</div>
+			<div class="animate-if" ng-if="userdetails.friend_status == 5">
+				You Are Friends! <br /> <br />
+			</div>
 	    </div>
 
 	  </div>

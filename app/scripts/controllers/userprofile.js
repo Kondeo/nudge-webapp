@@ -18,7 +18,8 @@ angular.module('nudgeWebAppApp')
         submitjson.Id = "add";
         submitjson.session_token = session_token;
         submitjson.friend_id = $routeParams.userid;
-        Friends.add(submitjson);
+        $scope.addResult = Friends.add(submitjson);
+        $scope.userdetails.friend_status = "1";
     }
 
     //Fetch the session token
