@@ -10,34 +10,51 @@
     </div>
 
   </div>
-  <div class="tile switch2 animate-if" onclick="location.href='/#/events'" ng-if="friends.requestme">
+
+  <h3 ng-if="friends.requestme">Friend Requests Received</h3>
+  <div class="tile switch2 animate-if"
+    ng-if="friends.requestme"
+    ng-repeat="request in friends.requestme"
+    style="height:auto; min-height:0px;">
 
     <div class="tile-img-container" id="switch2-1">
       <!--<img class="tile-img" src="images/clink.png"/>-->
     </div>
-    <div class="tile-text" id="switch2-2">
-      <h3>Friend Requests Received</h3>
+    <div class="tile-text"
+      id="switch2-2"
+      style="height:auto; margin-bottom: 0px; margin-top: 0px;"
+      ng-click="go('/user/{{request.id}}')">
       
+      <h3 style="margin-top: 10px;">{{request.name}}</h3>
     </div>
 
   </div>
-  <div class="tile switch3 animate-if" onclick="location.href='/#/feed'" ng-if="friends.requested">
+
+  <h3 ng-if="friends.requested">Friend Requests Sent</h3>
+  <div class="tile switch3 animate-if"
+    ng-if="friends.requested"
+    ng-repeat="request in friends.requested"
+    style="height:auto; min-height:0px;">
     
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
-    <div class="tile-text" id="switch3-2">
-      <h3>Friend Requests Sent</h3>
+    <div class="tile-text"
+      id="switch3-2"
+      style="height:auto; margin-bottom: 0px; margin-top: 0px;"
+      ng-click="go('/user/{{request.id}}')">
       
+      <h3 style="margin-top: 10px;">{{request.name}}</h3>
     </div>
 
   </div>
-  <h2 ng-if="friends.friends" class="animate-if">Current Friends</h2><br />
+
+  <h3 ng-if="friends.friends" class="animate-if">Current Friends</h3><br />
   <div ng-if="friends.friends" ng-repeat="friend in friends.friends" class="tile switch3 animate-repeat">
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
-    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{friend.id}}')">
+    <div class="tile-text" id="switch3-2" ng-click="go('/user/{{friend.id}}')">
       <h3>{{friend.name}}</h3>
       {{friend.username}}
     </div>
