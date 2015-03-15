@@ -5,12 +5,20 @@
  * Code retrieves details for a specific friend ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('UserProfileCtrl', function ($scope, User, $location, $rootElement, $routeParams) {
+  .controller('UserProfileCtrl', function ($scope, User, Friends, $location, $rootElement, $routeParams) {
     
     //Redirects to desired local url
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
         $location.path(requrl);
+    }
+
+    $scope.addFriend = function(){
+        var submitjson = {};
+        submitjson.Id = "add";
+        submitjson.session_token = session_token;
+        submitjson.friend_id = $routeParams.userid;
+        Friends.add(submitjson);
     }
 
     //Fetch the session token
