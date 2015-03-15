@@ -38,4 +38,12 @@ function isLoggedIn(){
 //This function will delete our session token(cookie) and make us appear offline
     function delete_cookie() {
       document.cookie = "session_token" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
+}
+
+//Redirects to desired local url
+function go (requrl){
+        console.log("url switch for " + requrl);
+        //Cannot use $location since it is a service itself
+        //So we use location.assign to simply reassign the loaction
+        location.assign(location + requrl);
+}
