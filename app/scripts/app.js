@@ -41,13 +41,17 @@ angular
         templateUrl: 'views/events.html',
         //controller: 'AboutCtrl'
       })
-      .when('/event/:eventid', {
-        templateUrl: 'views/eventdetails.html',
-        controller: 'EventDetailsCtrl'
+      .when('/events/new', {
+        templateUrl: 'views/eventcreate.html',
+        controller: 'EventCreateCtrl'
       })
       .when('/events/me', {
         templateUrl: 'views/myevents.html',
         controller: 'MyEventsCtrl'
+      })
+      .when('/event/:eventid', {
+        templateUrl: 'views/eventdetails.html',
+        controller: 'EventDetailsCtrl'
       })
       .when('/friends', {
         templateUrl: 'views/friends.html',
