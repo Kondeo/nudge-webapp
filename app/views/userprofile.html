@@ -33,6 +33,10 @@
 			</div>
 			<br />
 	      	<button class="btn j-join" ng-click="addFriend()" ng-if="userdetails.friend_status == 0">Add Friend</button>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 2">
+				<button class="btn j-join" ng-click="acceptFriend()" ng-if="userdetails.friend_status == 2">Add</button>
+				<button class="btn j-join" ng-click="declineFriend()" ng-if="userdetails.friend_status == 2">Decline</button>
+			</div>
 	      	<div class="animate-if" ng-if="userdetails.friend_status == 1">
 				Friend Request Pending <br /> <br />
 			</div>

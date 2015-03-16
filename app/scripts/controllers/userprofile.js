@@ -22,6 +22,24 @@ angular.module('nudgeWebAppApp')
         $scope.userdetails.friend_status = "1";
     }
 
+    $scope.acceptFriend = function(){
+        var sumbitjson = {};
+        submitjson.Id = "accept";
+        submitjson.session_token = session_token;
+        submitjson.friend_id = $routeParams.userid;
+        $scope.acceptResult = Friends.accept(submitjson);
+        $scope.userdetails.friend_status = "5";
+    }
+
+    $scope.declineFriend = function(){
+        var sumbitjson = {};
+        submitjson.Id = "decline";
+        submitjson.session_token = session_token;
+        submitjson.friend_id = $routeParams.userid;
+        $scope.declineResult = Friends.decline(submitjson);
+        $scope.userdetails.friend_status = "0";
+    }
+
     //Fetch the session token
     var session_token = getCookie("session_token");
     //Define json to be sent to server
