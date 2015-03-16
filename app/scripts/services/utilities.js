@@ -34,3 +34,11 @@ function isLoggedIn(){
         return false;
     }
 }
+
+//Redirects to desired local url
+function go (requrl){
+        console.log("url switch for " + requrl);
+        //Cannot use $location since it is a service itself
+        //So we use location.href to reassign the location by /# plus the path
+        location.href = "/#" + requrl;
+}

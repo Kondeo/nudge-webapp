@@ -9,12 +9,6 @@
 angular.module('nudgeWebAppApp')
   .controller('LoginCtrl', function ($scope, Login, $location, $rootElement) {
     
-    //Redirects to desired local url
-    $scope.go = function(requrl){
-        console.log("url switch for " + requrl);
-        $location.path(requrl);
-    }
-
     //Form submission function
     $scope.submit = function(){
 
@@ -39,7 +33,7 @@ angular.module('nudgeWebAppApp')
                 //Store the token from the server for future use
                 document.cookie = "session_token=" + $scope.loginfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
                 //Redirect to main site
-                $scope.go("/");
+                go("/");
 
             }
 
