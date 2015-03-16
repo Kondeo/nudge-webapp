@@ -35,7 +35,7 @@ angular
       })
       .when('/events', {
         templateUrl: 'views/events.html',
-        //controller: 'AboutCtrl'
+        controller: 'EventsCtrl'
       })
       .when('/events/new', {
         templateUrl: 'views/eventcreate.html',
@@ -64,10 +64,6 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
-      })
-      .when('/events', {
-        templateUrl: 'views/events.html',
-        /*controller: 'AboutCtrl'*/
       })
       .when('/welcome', {
         templateUrl: 'views/welcome.html',
