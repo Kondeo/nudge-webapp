@@ -8,10 +8,7 @@ angular.module('nudgeWebAppApp')
   .controller('FriendsCtrl', function ($scope, Friends, $location, $rootElement, StringSearch) {
     
     //Redirects to desired local url
-    $scope.go = function(requrl){
-        console.log("url switch for " + requrl);
-        $location.path(requrl);
-    }
+    $scope.go = go;
 
     $scope.search = {};
 
