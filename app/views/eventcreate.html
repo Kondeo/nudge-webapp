@@ -6,7 +6,7 @@
 			ng-submit="submit()" >
 			<input class="j-input-1"
 			name="name"
-			placeholder="Event Title"
+			placeholder="*Event Title"
 			ng-model="newEvent.name"
 			ng-minlength=5
 			ng-maxlength=400 ng-focus required></input>
@@ -21,7 +21,7 @@
 	             <br />Must be at least 5 characters.<br />
 	         </small>
 
-			<br />Start<br />
+			<br />*Start<br />
 			<input type="datetime-local"
 				name="start"
 				ng-model="newEvent.start"
@@ -36,7 +36,7 @@
       		<span class="error"
       			ng-show="form.start.$error.required && start.blur"><br />Valid date is required</span>
 
-	      	<br />End<br />
+	      	<br />*End<br />
 			<input type="datetime-local"
 				name="end"
 				ng-model="newEvent.end"
