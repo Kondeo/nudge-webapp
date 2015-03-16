@@ -52,3 +52,17 @@ angular.module('nudgeWebAppApp')
         } );
 
 }]);
+
+angular.module('nudgeWebAppApp')
+  .factory('StringSearch', ['$resource', function($resource) {
+
+    return $resource( apiBase + 'users/string', 
+        {}, { 
+            search: { 
+                method: 'POST', 
+                params: {}, 
+                isArray: false 
+            }
+        } );
+
+}]);
