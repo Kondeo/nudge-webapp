@@ -19,6 +19,11 @@ angular.module('nudgeWebAppApp')
                 method: 'POST', 
                 params: { Id: 'accept' },
                 isArray: false 
+            },
+            decline: {
+                method: 'POST',
+                params: { Id: 'decline' },
+                isArray: false
             }
             
         } );
