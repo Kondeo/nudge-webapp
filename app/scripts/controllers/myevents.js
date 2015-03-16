@@ -7,6 +7,9 @@
 angular.module('nudgeWebAppApp')
   .controller('MyEventsCtrl', function ($scope, MyEvents, $location, $rootElement) {
     
+    //Redirects to desired local url
+    $scope.go = go;
+    
     //Get session token
     var session_token = getCookie("session_token");
     //Initialize submission json

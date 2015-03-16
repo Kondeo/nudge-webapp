@@ -7,6 +7,9 @@
 angular.module('nudgeWebAppApp')
   .controller('FriendDetailsCtrl', function ($scope, User, $location, $rootElement, $routeParams) {
     
+    //Redirects to desired local url
+    $scope.go = go;
+    
     //Fetch the session token
     var session_token = getCookie("session_token");
     //Define json to be sent to server

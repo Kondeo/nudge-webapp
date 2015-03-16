@@ -7,11 +7,14 @@
 angular.module('nudgeWebAppApp')
   .controller('MainCtrl', function ($scope, Events, $location, $rootElement) {
     
+    //Redirects to desired local url
+    $scope.go = go;
+
     //Get session token
     $scope.token = getCookie("session_token");
     //If there is no token, redirect to welcome page
     if (!(document.cookie.indexOf("session_token") >= 0)) {
-        go("/welcome");
+        $scope.go("/welcome");
     }
 
     $scope.events = Events.query(catchError);

@@ -7,6 +7,9 @@
 angular.module('nudgeWebAppApp')
   .controller('FriendsCtrl', function ($scope, Friends, $location, $rootElement, StringSearch) {
     
+    //Redirects to desired local url
+    $scope.go = go;
+    
     $scope.search = {};
 
     $scope.searchSubmit = function(){

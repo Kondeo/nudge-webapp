@@ -9,6 +9,9 @@
 angular.module('nudgeWebAppApp')
   .controller('JoinCtrl', function ($scope, Join, $location, $rootElement) {
 
+    //Redirects to desired local url
+    $scope.go = go;
+
     //Form submission function
     $scope.submit = function(){
 
@@ -50,7 +53,7 @@ angular.module('nudgeWebAppApp')
                 //Store session token in cookies for future use
                 document.cookie = "session_token=" + $scope.joinfinish.result.session_token + "; expires=Sun, 18 Jan 2037 12:00:00 GMT";
                 //Redirect to main site
-                go("/");
+                $scope.go("/");
 
             }
 
