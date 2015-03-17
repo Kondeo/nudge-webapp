@@ -73,3 +73,7 @@ Users can request an RSVP to events and hosts can accept or decline that request
 User ratings and profile ranking. users can rank eachother as long as they have attended the same party
 
 -----------
+
+<b>License</b>
+
+The license for this software is viewable in the LICENSE.md file in the root of this repository.
