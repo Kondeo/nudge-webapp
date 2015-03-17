@@ -13,10 +13,20 @@ angular.module('nudgeWebAppApp')
         $location.path(requrl);
     }
 
-    $scope.search = {};
+    //Set search results to be empty for html elements
+    $scope.search = {"empty":"true"};
+
+    //For html "No results"
+    $scope.searchSubmitted = false;
 
     $scope.searchSubmit = function(){
-        $scope.search = StringSearch.search({"query":$scope.searchField})
+        //Reset
+        $scope.searchSubmitted = false;
+        //Get results from query
+        $scope.search = StringSearch.search({"query":$scope.searchField}, function(){
+            //For html "No Results"
+            $scope.searchSubmitted = true;
+        });
     }
 
     //Fetch the session token
