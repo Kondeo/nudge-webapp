@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * JavaScript for friends page.
+ * JavaScript for people page.
  * Code retrieves all friends for the logged in user.
  */
 angular.module('nudgeWebAppApp')
-  .controller('FriendsCtrl', function ($scope, Friends, $location, $rootElement, StringSearch) {
+  .controller('PeopleCtrl', function ($scope, Friends, $location, $rootElement, StringSearch) {
     
     //Redirects to desired local url
     $scope.go = function(requrl){

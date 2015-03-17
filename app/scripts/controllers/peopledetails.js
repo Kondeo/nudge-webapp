@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * JavaScript for friend details
- * Code retrieves details for a specific friend ID
+ * JavaScript for people details
+ * Code retrieves details for a specific user ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('FriendDetailsCtrl', function ($scope, User, $location, $rootElement, $routeParams) {
+  .controller('PeopleDetailsCtrl', function ($scope, User, $location, $rootElement, $routeParams) {
     
     //Redirects to desired local url
     $scope.go = function(requrl){
@@ -19,8 +19,8 @@ angular.module('nudgeWebAppApp')
     var submitjson = {};
     //Add session token and url ID parameter to json
     submitjson.session_token = session_token;
-    submitjson.Id = $routeParams.friendid;
+    submitjson.Id = $routeParams.userid;
     //Send json to server and store response in scope variable
-    $scope.frienddetails = User.get(submitjson, catchError);
+    $scope.userDetails = User.get(submitjson, catchError);
 
   });

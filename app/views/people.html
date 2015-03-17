@@ -1,11 +1,11 @@
 <div class="tile-container">
-  <h2>Friends</h2><br />
+  <h2>People</h2><br />
   <div class="tile switch1">
 
     <div class="tile-text" id="switch1-2">
       <h3>Search</h3>
       <form ng-submit="searchSubmit()">
-        <input ng-model="searchField" type="text" placeholder="Search for...">
+        <input ng-model="searchField" type="text" placeholder="The entirety of nudge">
       </form>
       <small ng-if="!search.result[0].id && searchSubmitted">
         Search returned no results.
@@ -19,7 +19,7 @@
   <div ng-if="search.result[0].id" ng-repeat="profile in search.result" class="tile switch3 animate-if">
     <div class="tile-img-container" id="switch3-1">
     </div>
-    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{profile.id}}')">
+    <div class="tile-text" id="switch3-2" ng-click="go('/user/{{profile.id}}')">
       <h3>{{profile.name}}</h3>
       {{profile.username}}
     </div>
@@ -58,7 +58,7 @@
     <div class="tile-img-container" id="switch3-1">
       <!--<img class="tile-img" src="images/news.png"/>-->
     </div>
-    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{friend.id}}')">
+    <div class="tile-text" id="switch3-2" ng-click="go('/user/{{friend.id}}')">
       <h3>{{friend.name}}</h3>
       {{friend.username}}
     </div>

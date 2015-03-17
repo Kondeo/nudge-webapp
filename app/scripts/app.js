@@ -49,13 +49,13 @@ angular
         templateUrl: 'views/myevents.html',
         controller: 'MyEventsCtrl'
       })
-      .when('/friends', {
-        templateUrl: 'views/friends.html',
-        controller: 'FriendsCtrl'
+      .when('/people', {
+        templateUrl: 'views/people.html',
+        controller: 'PeopleCtrl'
       })
-      .when('/friend/:friendid', {
-        templateUrl: 'views/frienddetails.html',
-        controller: 'FriendDetailsCtrl'
+      .when('/user/:userid', {
+        templateUrl: 'views/peopledetails.html',
+        controller: 'PeopleDetailsCtrl'
       })
       .when('/feed', {
         templateUrl: 'views/feed.html',
