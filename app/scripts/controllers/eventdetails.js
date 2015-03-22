@@ -15,10 +15,10 @@ angular.module('nudgeWebAppApp')
 
     $scope.requestEvent = function(){
         var submitjson = {};
-        submitjson.Id = "add";
+        submitjson.Id = "request";
         submitjson.session_token = session_token;
         submitjson.event_id = $routeParams.eventid;
-        $scope.addResult = RSVP.add(submitjson);
+        $scope.addResult = RSVP.request(submitjson);
         $scope.eventdetails.status = "1";
     }
 

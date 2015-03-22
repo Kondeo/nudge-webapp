@@ -71,11 +71,6 @@ angular.module('nudgeWebAppApp')
                 params: { Id: 'invite' }, 
                 isArray: false 
             },
-            add: { 
-                method: 'POST', 
-                params: { Id: 'add' }, 
-                isArray: false 
-            },
             accept: { 
                 method: 'POST', 
                 params: { Id: 'accept' },
