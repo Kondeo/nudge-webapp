@@ -5,12 +5,39 @@
  * Gets the details for a provided event ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('EventDetailsCtrl', function ($scope, Events, $location, $rootElement, $routeParams) {
+  .controller('EventDetailsCtrl', function ($scope, Events, RSVP, $location, $rootElement, $routeParams) {
     
     //Redirects to desired local url
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
         $location.path(requrl);
+    }
+
+    $scope.requestEvent = function(){
+        var submitjson = {};
+        submitjson.Id = "add";
+        submitjson.session_token = session_token;
+        submitjson.event_id = $routeParams.eventid;
+        $scope.addResult = RSVP.add(submitjson);
+        $scope.eventdetails.status = "1";
+    }
+
+    $scope.acceptEvent = function(){
+        var sumbitjson = {};
+        submitjson.Id = "accept";
+        submitjson.session_token = session_token;
+        submitjson.event_id = $routeParams.eventid;
+        $scope.acceptResult = RSVP.accept(submitjson);
+        $scope.eventdetails.status = "5";
+    }
+
+    $scope.declineEvent = function(){
+        var sumbitjson = {};
+        submitjson.Id = "decline";
+        submitjson.session_token = session_token;
+        submitjson.event_id = $routeParams.eventid;
+        $scope.declineResult = RSVP.decline(submitjson);
+        $scope.eventdetails.status = "0";
     }
 
     //Fetch the session token
