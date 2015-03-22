@@ -1,0 +1,49 @@
+
+<div class="tile-container">
+	<div class="tile switch2 animate-if" ng-if="userdetails.name" style="height:auto;">
+
+	    <div class="tile-img-container" id="switch2-1">
+	      <!--<img class="tile-img" src="images/clink.png"/>-->
+	    </div>
+	    <div class="tile-text" id="switch2-2" style="height:auto;">
+	      	<h3>{{userdetails.name}}</h3>
+	      	<div ng-if="userdetails.username">
+	      		{{userdetails.username}} <br />
+	      	</div>
+	      	<div ng-if="userdetails.phone">
+				{{userdetails.phone}} <br />
+			</div>
+			<div ng-if="userdetails.address1">
+				{{userdetails.address1}} <br />
+			</div>
+			<div ng-if="userdetails.address2">
+				{{userdetails.address2}} <br />
+			</div>
+			<div ng-if="userdetails.city">
+				{{userdetails.city}} <br />
+			</div>
+			<div ng-if="userdetails.state">
+				{{userdetails.state}} <br />
+			</div>
+			<div ng-if="userdetails.zip">
+				{{userdetails.zip}} <br />
+			</div>
+			<div ng-if="userdetails.profile">
+				{{userdetails.profile}} <br /> <br />
+			</div>
+			<br />
+	      	<button class="btn j-join" ng-click="addFriend()" ng-if="userdetails.friend_status == 0">Add Friend</button>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 2">
+				<button class="btn j-join" ng-click="acceptFriend()" ng-if="userdetails.friend_status == 2">Add</button>
+				<button class="btn j-join" ng-click="declineFriend()" ng-if="userdetails.friend_status == 2">Decline</button>
+			</div>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 1">
+				Friend Request Pending <br /> <br />
+			</div>
+			<div class="animate-if" ng-if="userdetails.friend_status == 5">
+				You Are Friends! <br /> <br />
+			</div>
+	    </div>
+
+	  </div>
+</div>
