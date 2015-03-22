@@ -4,9 +4,23 @@
 
     <div class="tile-text" id="switch1-2">
       <h3>Search</h3>
-      <form>
-          <input type="text" placeholder="Enter a name">
+      <form ng-submit="searchSubmit()">
+        <input ng-model="searchField" type="text" placeholder="Search for...">
       </form>
+      <small ng-if="!search.result[0].id && searchSubmitted">
+        Search returned no results.
+      </small>
+    </div>
+
+  </div>
+
+  <h2 ng-if="search.result[0].id" class="animate-if">Search Results</h2><br />
+  <div ng-if="search.result[0].id" ng-repeat="profile in search.result" class="tile switch3 animate-if">
+    <div class="tile-img-container" id="switch3-1">
+    </div>
+    <div class="tile-text" id="switch3-2" ng-click="go('/friend/{{profile.id}}')">
+      <h3>{{profile.name}}</h3>
+      {{profile.username}}
     </div>
 
   </div>

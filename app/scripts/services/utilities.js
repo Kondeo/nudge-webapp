@@ -34,3 +34,8 @@ function isLoggedIn(){
         return false;
     }
 }
+
+//This function will delete our session token(cookie) and make us appear offline
+    function delete_cookie() {
+      document.cookie = "session_token" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  }

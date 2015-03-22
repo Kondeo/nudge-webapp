@@ -1,0 +1,76 @@
+<div class="join-container">
+	<div class="j-back">
+		<h2 class="j-head">Create an Event</h2>
+		<form class="j-form"
+			name="form"
+			ng-submit="submit()" >
+			<input class="j-input-1"
+			name="name"
+			placeholder="*Event Title"
+			ng-model="newEvent.name"
+			ng-minlength=5
+			ng-maxlength=400 ng-focus required></input>
+			<small class="error" 
+	             ng-show="
+	             form.name.$dirty && form.name.$invalid && form.name.$error.required">
+	             <br />An event name is required.<br />
+	         </small>
+	         <small class="error" 
+	             ng-show="
+	             form.name.$dirty && form.name.$invalid && form.name.$error.minlength">
+	             <br />Must be at least 5 characters.<br />
+	         </small>
+
+			<br />*Start<br />
+			<input type="datetime-local"
+				name="start"
+				ng-model="newEvent.start"
+	      		placeholder="yyyy-MM-ddTHH:mm:ss"
+	      		min="2014-01-01T00:00:00"
+	      		max="2018-12-31T00:00:00"
+	      		ng-focus="start.blur = false"
+	      		ng-blur="start.blur = true" required />
+	      	<span class="error"
+	      		ng-show="form.start.$error.datetimelocal">
+      			Not a valid date!</span>
+      		<span class="error"
+      			ng-show="form.start.$error.required && start.blur"><br />Valid date is required</span>
+
+	      	<br />*End<br />
+			<input type="datetime-local"
+				name="end"
+				ng-model="newEvent.end"
+      			placeholder="yyyy-MM-ddTHH:mm:ss"
+      			min="2014-01-01T00:00:00"
+      			max="2018-12-31T00:00:00"
+      			ng-focus="end.blur = false"
+	      		ng-blur="end.blur = true" required />
+	      	<span class="error"
+	      		ng-show="form.end.$error.datetimelocal">
+      			<br />Not a valid date!</span>
+      		<span class="error" 
+      			ng-show="(form.end.$error.required || !form.end.$valid) && end.blur"><br />Valid date is required</span>
+
+      		<br /><br />
+			<input class="j-input-1"
+			placeholder="Category"
+			ng-model="newEvent.category"></input>
+			<br />
+			<input type="radio"
+				name="publicity"
+				value="false"
+				ng-model="newEvent.publicity"> Private 
+			<input type="radio"
+				name="publicity"
+				value="true"
+				ng-model="newEvent.publicity"> Public
+			<br /><br />
+			<button class="btn j-join"
+				type="submit"
+				ng-disabled="form.$invalid"
+				>Create</button>
+			
+			<div class="j-required">* required fields</div>
+		</form>
+	</div>
+</div>
