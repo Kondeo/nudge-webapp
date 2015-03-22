@@ -14,7 +14,8 @@ angular.module('nudgeWebAppApp')
     {
             setTimeout(function () {
         $scope.$apply(function(){
-            document.getElementById("bs-example-navbar-collapse-1").className="collapse";
+            //document.getElementById("bs-example-navbar-collapse-1").className="collapse";
+    		$('#bs-example-navbar-collapse-1').collapse('hide');
         });
     }, 100);
     });
