@@ -38,16 +38,17 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 				{{eventdetails.end_time}} <br /> <br />
 			</div>
 			<br />
-	      	<button class="btn j-join" ng-click="addFriend()" ng-if="userdetails.friend_status == 0">Add Friend</button>
-	      	<div class="animate-if" ng-if="userdetails.friend_status == 2">
-				<button class="btn j-join" ng-click="acceptFriend()" ng-if="userdetails.friend_status == 2">Add</button>
-				<button class="btn j-join" ng-click="declineFriend()" ng-if="userdetails.friend_status == 2">Decline</button>
+	      	<button class="btn j-join" ng-click="addEvent()" ng-if="eventdetails.public == 1">RSVP</button>
+	      	<button class="btn j-join" ng-click="addEvent()" ng-if="eventdetails.public == 0">Request RSVP</button>
+	      	<div class="animate-if" ng-if="eventdetails.status == 2">
+				<button class="btn j-join" ng-click="acceptEvent()" ng-if="eventdetails.status == 2">Accept</button>
+				<button class="btn j-join" ng-click="declineEvent()" ng-if="eventdetails.status == 2">Decline</button>
 			</div>
-	      	<div class="animate-if" ng-if="userdetails.friend_status == 1">
-				Friend Request Pending <br /> <br />
+	      	<div class="animate-if" ng-if="eventdetails.status == 1">
+				RSVP Pending <br /> <br />
 			</div>
-			<div class="animate-if" ng-if="userdetails.friend_status == 5">
-				You Are Friends! <br /> <br />
+			<div class="animate-if" ng-if="eventdetails.status == 5">
+				You Are RSVP'd! <br /> <br />
 			</div>
 	    </div>
 
