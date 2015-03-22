@@ -1,3 +1,5 @@
+<!--
+Event Details parameters
 Name: {{eventdetails.name}} <br />
 Date: {{eventdetails.date}} <br />
 Host ID: {{eventdetails.host_id}} <br />
@@ -6,3 +8,48 @@ Category: {{eventdetails.category}} <br />
 Description: {{eventdetails.description}} <br />
 Start Time: {{eventdetails.start_time}} <br />
 End Time: {{eventdetails.end_time}} <br /> <br />
+
+-->
+
+<div class="tile-container">
+	<div class="tile switch2 animate-if" ng-if="eventdetails.name" style="height:auto;">
+
+	    <div class="tile-img-container" id="switch2-1">
+	      <!--<img class="tile-img" src="images/clink.png"/>-->
+	    </div>
+	    <div class="tile-text" id="switch2-2" style="height:auto;">
+	      	<h3>{{userdetails.name}}</h3>
+	      	<div ng-if="eventdetails.name">
+	      		{{eventdetails.name}} <br />
+	      	</div>
+			<div ng-if="eventdetails.public == 0">
+			This is event is private... <br />
+			</div>
+			<div ng-if="eventdetails.category">
+				{{eventdetails.category}} <br />
+			</div>
+			<div ng-if="eventdetails.description">
+				{{eventdetails.description}} <br />
+			</div>
+			<div ng-if="eventdetails.start_time">
+				{{eventdetails.start_time}} <br />
+			</div>
+			<div ng-if="eventdetails.end_time">
+				{{eventdetails.end_time}} <br /> <br />
+			</div>
+			<br />
+	      	<button class="btn j-join" ng-click="addFriend()" ng-if="userdetails.friend_status == 0">Add Friend</button>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 2">
+				<button class="btn j-join" ng-click="acceptFriend()" ng-if="userdetails.friend_status == 2">Add</button>
+				<button class="btn j-join" ng-click="declineFriend()" ng-if="userdetails.friend_status == 2">Decline</button>
+			</div>
+	      	<div class="animate-if" ng-if="userdetails.friend_status == 1">
+				Friend Request Pending <br /> <br />
+			</div>
+			<div class="animate-if" ng-if="userdetails.friend_status == 5">
+				You Are Friends! <br /> <br />
+			</div>
+	    </div>
+
+	  </div>
+</div>
