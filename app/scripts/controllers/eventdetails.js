@@ -13,7 +13,7 @@ angular.module('nudgeWebAppApp')
         $location.path(requrl);
     }
 
-    $scope.requestEvent = function(){
+    $scope.requestRSVP = function(){
         var submitjson = {};
         submitjson.Id = "request";
         submitjson.session_token = session_token;
@@ -22,7 +22,7 @@ angular.module('nudgeWebAppApp')
         $scope.eventdetails.status = "1";
     }
 
-    $scope.acceptEvent = function(){
+    $scope.acceptRSVP = function(){
         var sumbitjson = {};
         submitjson.Id = "accept";
         submitjson.session_token = session_token;
@@ -31,7 +31,7 @@ angular.module('nudgeWebAppApp')
         $scope.eventdetails.status = "5";
     }
 
-    $scope.declineEvent = function(){
+    $scope.declineRSVP = function(){
         var sumbitjson = {};
         submitjson.Id = "decline";
         submitjson.session_token = session_token;
@@ -40,12 +40,27 @@ angular.module('nudgeWebAppApp')
         $scope.eventdetails.status = "0";
     }
 
+    $scope.cancelRSVP = function(){
+        var sumbitjson = {};
+        submitjson.Id = "cancel";
+        submitjson.session_token = session_token;
+        submitjson.event_id = $routeParams.eventid;
+        $scope.declineResult = RSVP.decline(submitjson);
+        $scope.eventdetails.status = "0";
+    }
+
+    //Supposed to redirect to event edit page
+    $scope.editEvent = function(){
+        $scope.go("");
+    }
+
     //Fetch the session token
     var session_token = getCookie("session_token");
     //Define json to be sent to server
     var submitjson = {};
     //Get url parameter for ID, and add it to the json
     submitjson.Id = $routeParams.eventid;
+    submitjson.session_token = session_token;
     //Send the json data to the server and store the result in scope variable
     $scope.eventdetails = Events.get(submitjson, catchError);
 
