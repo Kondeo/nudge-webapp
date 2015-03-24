@@ -16,19 +16,19 @@ Italics for complete.
 > Accounts<br />
 	> <i>Register</i><br />
 	> <i>Login</i><br />
-	> Profile<br />
-	> Edit<br />
-	> Add Friends<br />
+	> <i>Profile</i><br />
+	> Edit Profile<br />
+	> <i>Add Friends</i><br />
 	> Remove Friends<br />
-	> Accept Friends<br />
-	> Deny Friends<br />
-	> Delete<br />
+	> <i>Accept Friends</i><br />
+	> <i>Deny Friends</i><br />
+	> Delete Account<br />
 	> Ratings/Reviews<br />
 > Events<br />
-	> Create<br />
+	> <i>Create</i><br />
 	> Edit<br />
 	> Delete<br />
-	> Basic search<br />
+	> <i>Basic search</i><br />
 	> RSVP<br />
 		> Accept<br />
 		> Decline<br />
