@@ -17,3 +17,11 @@ describe('Controller: AboutCtrl', function () {
   }));
 
 });
+describe('Simple E2e Test', function()
+{
+    it('Should open the front page and check', function()
+    {
+        
+
+    });
+});
