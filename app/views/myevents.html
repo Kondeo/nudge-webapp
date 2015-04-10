@@ -1,27 +1,114 @@
 <div class="tile-container">
-  <h2>My Events</h2><br />
-  <div class="tile switch1 animate-repeat" style="height: 80px; min-height: 80px;">
 
-    <div class="tile-img-container" id="switch1-1">
+  <div id="MyEvents">
+    <h2>My Events</h2><br />
+    <div class="tile switch1 animate-repeat" style="height: 80px; min-height: 80px;">
+
+      <div class="tile-img-container" id="switch1-1">
       <!--<img class="tile-img" src="images/friends.png"/>-->
-    </div>
-    <div class="tile-text" id="switch1-2" ng-click="go('/events/new')">
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/events/new')">
       <h3>Create</h3>
-    </div>
+      </div>
 
+    </div>
+    <div class="tile switch1 animate-repeat"
+    ng-if="events"
+    ng-repeat="event in events">
+
+      <div class="tile-img-container" id="switch1-1">
+        <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event.id}}')">
+        <h3>{{event.name}}</h3>
+        {{event.date}}<br />
+        {{event.category}}
+      </div>
+
+    </div>
   </div>
-  <div class="tile switch1 animate-repeat"
-  ng-if="events"
-  ng-repeat="event in events">
 
-    <div class="tile-img-container" id="switch1-1">
+  <div id="RSVP'd">
+    <h2>RSVP'd</h2><br />
+    <div class="tile switch1 animate-repeat" style="height: 80px; min-height: 80px;">
+
+      <div class="tile-img-container" id="switch1-1">
       <!--<img class="tile-img" src="images/friends.png"/>-->
-    </div>
-    <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event.id}}')">
-      <h3>{{event.name}}</h3>
-      {{event.date}}<br />
-      {{event.category}}
-    </div>
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/events/new')">
+      <h3>Create</h3>
+      </div>
 
+    </div>
+    <div class="tile switch1 animate-repeat"
+    ng-if="events"
+    ng-repeat="event in events">
+
+      <div class="tile-img-container" id="switch1-1">
+        <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event.id}}')">
+        <h3>{{event.name}}</h3>
+        {{event.date}}<br />
+        {{event.category}}
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Invited Events">
+    <h2>Invited Events</h2><br />
+    <div class="tile switch1 animate-repeat" style="height: 80px; min-height: 80px;">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/events/new')">
+      <h3>Create</h3>
+      </div>
+
+    </div>
+    <div class="tile switch1 animate-repeat"
+    ng-if="events"
+    ng-repeat="event in events">
+
+      <div class="tile-img-container" id="switch1-1">
+        <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event.id}}')">
+        <h3>{{event.name}}</h3>
+        {{event.date}}<br />
+        {{event.category}}
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Pending RSVP's">
+    <h2>Pending RSVP's</h2><br />
+    <div class="tile switch1 animate-repeat" style="height: 80px; min-height: 80px;">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/events/new')">
+      <h3>Create</h3>
+      </div>
+
+    </div>
+    <div class="tile switch1 animate-repeat"
+    ng-if="events"
+    ng-repeat="event in events">
+
+      <div class="tile-img-container" id="switch1-1">
+        <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event.id}}')">
+        <h3>{{event.name}}</h3>
+        {{event.date}}<br />
+        {{event.category}}
+      </div>
+
+    </div>
   </div>
 </div>
