@@ -25,7 +25,10 @@ angular.module('nudgeWebAppApp')
     //Function to unfriend a user
     $scope.unFriend = function(){
 
-      ngDialog.open({ template: '../views/dialogs/unfriend.html' });
+      ngDialog.open({
+        template: '../views/dialogs/unfriend.html',
+        overlay: 'true'
+        });
       /* without ng dialog
         //get our json
         var submitjson = {};
