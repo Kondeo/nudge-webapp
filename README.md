@@ -16,6 +16,7 @@ Incomplete list<br />
 ndDialog - https://github.com/likeastore/ngDialog
 -bower install ngDialog
 <br />
+Also need to include in app.js, and index.html (.js ad ngdialog default theme and ngdialog css)
 
 --------------
 
