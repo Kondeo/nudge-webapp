@@ -5,7 +5,7 @@
  * Code retrieves details for a specific friend ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('UserProfileCtrl', function ($scope, User, Friends, $location, $rootElement, $routeParams) {
+  .controller('UserProfileCtrl', function ($scope, User, Friends, ngDialog, $location, $rootElement, $routeParams) {
 
     //Redirects to desired local url
     $scope.go = function(requrl){
@@ -24,6 +24,9 @@ angular.module('nudgeWebAppApp')
 
     //Function to unfriend a user
     $scope.unFriend = function(){
+
+      ngDialog.open({ template: 'popupTmpl.html' });
+      /* without ng dialog
         //get our json
         var submitjson = {};
         submitjson.Id = "remove";
@@ -32,6 +35,7 @@ angular.module('nudgeWebAppApp')
         $scope.addResult = Friends.remove(submitjson);
         //Set friend status to zero (Not friends and can re-add them)
         $scope.userdetails.friend_status = "0";
+        */
     }
 
     $scope.acceptFriend = function(){
