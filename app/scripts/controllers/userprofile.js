@@ -27,7 +27,7 @@ angular.module('nudgeWebAppApp')
 
       var dialog = ngDialog.open({
         //Our html for dialog
-        template: '../views/dialogs/unfriend.html'
+        template: '../views/dialogs/unfriend.html',
         //controller for the dialog
         controller: ['$scope',
         function($scope, User, Friends, $location, $rootElement, $routeParams)
@@ -35,6 +35,7 @@ angular.module('nudgeWebAppApp')
           //function if they choose yes to remove
           $scope.remove = function()
           {
+            alert("WE IN DIS");
             //get our json
             var submitjson = {};
             submitjson.Id = "remove";
@@ -47,7 +48,7 @@ angular.module('nudgeWebAppApp')
           //function if they choose no to remove
           $scope.cancel = function()
           {
-            
+
           }
         }]
         });
