@@ -9,6 +9,19 @@ The frontend of nudge connects to the backend for any functionality past static 
 
 --------------
 
+<b>Install Requirements</b><br />
+
+Incomplete list<br />
+<br />
+ndDialog - https://github.com/likeastore/ngDialog
+-bower install ngDialog
+<br />
+Also need to include in app.js, and index.html (.js ad ngdialog default theme and ngdialog css)
+<br />
+may need to add "ngDialog": "0.3.12" to dependencies of bower.json and bower update
+
+--------------
+
 <b>MVP Functionality</b><br />
 Sorted by priority<br />
 Italics for complete.
@@ -44,13 +57,13 @@ Incomplete list.
 > Can view events based on their category<br />
 > Can search events based on their category
 
-  
+
 -----------
 
-<b>Team</b><br /> 
+<b>Team</b><br />
 
 Jacob > Design<br />
-Aaron > Frontend dev<br />
+Aaron (torch2424)> Frontend dev ;)<br />
 Julian > Backend dev
 
 -----------

@@ -286,13 +286,13 @@ input {
 .l-username {
   border: none !important;
   background-color: white;
-  width: calc(100% - 50px); 
-  text-align: center; 
-  font-size: 20px; 
+  width: calc(100% - 50px);
+  text-align: center;
+  font-size: 20px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 4px;
-  margin-bottom: 10px;   
+  margin-bottom: 10px;
 }
 
 .l-username::-webkit-input-placeholder { color:#444; }
@@ -320,13 +320,13 @@ input {
 .j-input-1 {
   border: none !important;
   background-color: white;
-  width: calc(100% - 50px); 
-  text-align: center; 
-  font-size: 20px; 
+  width: calc(100% - 50px);
+  text-align: center;
+  font-size: 20px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 4px;
-  margin-bottom: 10px;   
+  margin-bottom: 10px;
 }
 
 .j-input-1::-webkit-input-placeholder { color:#444; }
@@ -337,13 +337,13 @@ input {
 .j-input-2 {
   border: none !important;
   background-color: white;
-  width: calc(50% - 27px); 
-  text-align: center; 
-  font-size: 20px; 
+  width: calc(50% - 27px);
+  text-align: center;
+  font-size: 20px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 4px;
-  margin-bottom: 10px;   
+  margin-bottom: 10px;
 }
 
 .j-input-2::-webkit-input-placeholder { color:#444; }
@@ -542,6 +542,20 @@ input {
   width: 290px;
   height: 290px;
   padding: 5px;
+}
+
+/* Class to control our dialog styles */
+.dialog-tile
+{
+  color: $asphalt;
+  background-color: transparent;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dialog-tile #dialogButtons
+{
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 890px) {
