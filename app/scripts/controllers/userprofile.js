@@ -26,7 +26,30 @@ angular.module('nudgeWebAppApp')
     $scope.unFriend = function(){
 
       var dialog = ngDialog.open({
+        //Our html for dialog
         template: '../views/dialogs/unfriend.html'
+        //controller for the dialog
+        controller: ['$scope',
+        function($scope, User, Friends, $location, $rootElement, $routeParams)
+        {
+          //function if they choose yes to remove
+          $scope.remove = function()
+          {
+            //get our json
+            var submitjson = {};
+            submitjson.Id = "remove";
+            submitjson.session_token = session_token;
+            submitjson.friend_id = $routeParams.userid;
+            $scope.addResult = Friends.remove(submitjson);
+            //Set friend status to zero (Not friends and can re-add them)
+            $scope.userdetails.friend_status = "0";
+          }
+          //function if they choose no to remove
+          $scope.cancel = function()
+          {
+            
+          }
+        }]
         });
       /* without ng dialog
         //get our json
