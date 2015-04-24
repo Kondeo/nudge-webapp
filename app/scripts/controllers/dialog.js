@@ -29,10 +29,7 @@ angular.module('nudgeWebAppApp')
       //Set friend status to zero (Not friends and can re-add them)
       $scope.userdetails.friend_status = "0";
     }
-    //function if they choose no to remove
-    $scope.cancelFriend = function()
-    {
 
-    }
+    //Function to cancel is in the html
 
   });
