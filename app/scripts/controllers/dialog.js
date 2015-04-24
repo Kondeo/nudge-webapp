@@ -5,10 +5,10 @@
  * Code retrieves details for a specific friend ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('DialogCtrl', function ($scope, User, Friends, $location, $rootElement, $routeParams) {
+  .controller('DialogCtrl', function ($scope, User, Friends, ngDialog, $location, $rootElement, $routeParams) {
 
     //function if they choose yes to remove
-    $scope.remove = function()
+    $scope.removeFriend = function()
     {
       //get our json
       var submitjson = {};
@@ -20,7 +20,7 @@ angular.module('nudgeWebAppApp')
       $scope.userdetails.friend_status = "0";
     }
     //function if they choose no to remove
-    $scope.cancel = function()
+    $scope.cancelFriend = function()
     {
 
     }
