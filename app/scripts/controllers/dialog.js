@@ -5,7 +5,7 @@
  * Code retrieves details for a specific friend ID
  */
 angular.module('nudgeWebAppApp')
-  .controller('DialogCtrl', function ($scope, User, Friends, ngDialog, $location, $rootElement, $routeParams) {
+  .controller('DialogCtrl', function ($scope, User, Friends, ngDialog, $location, $rootElement, $routeParams, $route) {
 
     //Redirects to desired local url
     $scope.go = function(requrl){
@@ -37,7 +37,7 @@ angular.module('nudgeWebAppApp')
         ngDialog.closeAll(1);
 
         //Refresh the page to show you are no longer friends
-        $scope.go("#");
+        $route.reload();
       });
       //Set friend status to zero (Not friends and can re-add them)
       $scope.userdetails.friend_status = "0";
