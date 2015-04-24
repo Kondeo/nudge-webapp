@@ -39,8 +39,6 @@ angular.module('nudgeWebAppApp')
         //Refresh the page to show you are no longer friends
         $route.reload();
       });
-      //Set friend status to zero (Not friends and can re-add them)
-      $scope.userdetails.friend_status = "0";
     }
 
     //Function to cancel is in the html
