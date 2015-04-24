@@ -547,8 +547,13 @@ input {
 /* Class to control our dialog styles */
 .dialog-tile
 {
-  color: $nudge-grey;
+  color: $alazarin;
   background-color: transparent;
+  display: inline-block;
+  white-space: no-wrap;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 890px) {

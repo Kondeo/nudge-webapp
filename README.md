@@ -17,6 +17,8 @@ ndDialog - https://github.com/likeastore/ngDialog
 -bower install ngDialog
 <br />
 Also need to include in app.js, and index.html (.js ad ngdialog default theme and ngdialog css)
+<br />
+may need to add "ngDialog": "0.3.12" to dependencies of bower.json and bower update
 
 --------------
 
