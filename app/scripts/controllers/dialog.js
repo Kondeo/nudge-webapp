@@ -7,6 +7,12 @@
 angular.module('nudgeWebAppApp')
   .controller('DialogCtrl', function ($scope, User, Friends, ngDialog, $location, $rootElement, $routeParams) {
 
+    //Redirects to desired local url
+    $scope.go = function(requrl){
+        console.log("url switch for " + requrl);
+        $location.path(requrl);
+    }
+
     //Fetch the session token
     var session_token = getCookie("session_token");
     //Define json to be sent to server
@@ -25,7 +31,13 @@ angular.module('nudgeWebAppApp')
       submitjson.Id = "remove";
       submitjson.session_token = session_token;
       submitjson.friend_id = $routeParams.userid;
-      $scope.addResult = Friends.remove(submitjson);
+      $scope.addResult = Friends.remove(submitjson, function()
+      {
+        //Close the dialog
+        ngDialog.closeAll(1);
+
+        //Refresh the page to show you are no longer friends
+      });
       //Set friend status to zero (Not friends and can re-add them)
       $scope.userdetails.friend_status = "0";
     }
