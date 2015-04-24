@@ -29,7 +29,7 @@ angular.module('nudgeWebAppApp')
         //Our html for dialog
         template: '../views/dialogs/unfriend.html',
         //controller for the dialog
-        controller: "DialogCtrl"
+        controller: 'DialogCtrl'
         });
       /* without ng dialog
         //get our json
