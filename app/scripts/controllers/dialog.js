@@ -37,6 +37,7 @@ angular.module('nudgeWebAppApp')
         ngDialog.closeAll(1);
 
         //Refresh the page to show you are no longer friends
+        $scope.go("#");
       });
       //Set friend status to zero (Not friends and can re-add them)
       $scope.userdetails.friend_status = "0";
