@@ -549,11 +549,13 @@ input {
 {
   color: $asphalt;
   background-color: transparent;
-  display: inline-block;
-  white-space: no-wrap;
-  overflow: hidden;
   margin: 0 auto;
   text-align: center;
+}
+
+.dialog-tile #dialogButtons
+{
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 890px) {
