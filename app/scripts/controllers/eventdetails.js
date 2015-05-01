@@ -51,7 +51,7 @@ angular.module('nudgeWebAppApp')
 
     //Supposed to redirect to event edit page
     $scope.editEvent = function(){
-        $scope.go("/edit");
+        $scope.go("/event/" + $routeParams.eventid + "/edit");
     }
 
     //Fetch the session token
