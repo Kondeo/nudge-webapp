@@ -28,8 +28,11 @@ angular.module('nudgeWebAppApp')
     //Form submission function
     $scope.submit = function(){
 
+      //get our session token so we can submit it to the backend
+      $scope.eventdetails.session_token = session_token;
+
         //Submit json, and store the server response in scope variable
-        $scope.serverResponse = Events.save(eventdetails, function(){
+        $scope.serverResponse = Events.update($scope.eventdetails, function(){
             //If, after the submission is complete
             if ($scope.serverResponse.error) {
                 alert("There was an error!");
