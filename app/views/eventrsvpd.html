@@ -1,0 +1,61 @@
+<div class="tile-container">
+
+  <div id="Rsvp'd Events">
+  <h2>Rsvp'd Events</h2><br />
+  
+    <div class="tile switch1 animate-repeat"
+    ng-if="events.current"
+    ng-repeat="event in events.current">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event[0].id}}')">
+        <!-- event[0] is first event in current event object -->
+        <h3>{{event[0].name}}</h3>
+        {{event[0].date}}<br />
+        {{event[0].category}}
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Invited Events">
+  <h2>Invited Events</h2><br />
+    <div class="tile switch1 animate-repeat"
+    ng-if="events.invited"
+    ng-repeat="event in events.invited">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event[0].id}}')">
+        <!-- event[0] is first event in current event object -->
+        <h3>{{event[0].name}}</h3>
+        {{event[0].date}}<br />
+        {{event[0].category}}
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Pending Rsvp's">
+  <h2>Pending Rsvp's</h2><br />
+
+    <div class="tile switch1 animate-repeat"
+    ng-if="events.sent"
+    ng-repeat="event in events.sent">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2" ng-click="go('/event/{{event[0].id}}')">
+        <!-- event[0] is first event in current event object -->
+        <h3>{{event[0].name}}</h3>
+        {{event[0].date}}<br />
+        {{event[0].category}}
+      </div>
+
+    </div>
+  </div>
+</div>

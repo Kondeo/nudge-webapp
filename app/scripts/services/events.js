@@ -49,3 +49,39 @@ angular.module('nudgeWebAppApp')
         } );
 
 }]);
+
+  angular.module('nudgeWebAppApp')
+  .factory('RSVP', ['$resource', function($resource) {
+
+     return $resource( apiBase + 'events/rsvp/:Id', 
+        { Id: '@Id' }, { 
+            //request, invite, accept, cancel, get(blank id), all post
+            get: { 
+                method: 'POST', 
+                params: { Id: '' }, 
+                isArray: false 
+            },
+            request: { 
+                method: 'POST', 
+                params: { Id: 'request' }, 
+                isArray: false 
+            },
+            invite: { 
+                method: 'POST', 
+                params: { Id: 'invite' }, 
+                isArray: false 
+            },
+            accept: { 
+                method: 'POST', 
+                params: { Id: 'accept' },
+                isArray: false 
+            },
+            cancel: {
+                method: 'POST',
+                params: { Id: 'cancel' },
+                isArray: false
+            }
+            
+        } );
+
+}]);

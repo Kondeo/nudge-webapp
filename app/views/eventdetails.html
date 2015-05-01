@@ -1,3 +1,5 @@
+<!--
+Event Details parameters
 Name: {{eventdetails.name}} <br />
 Date: {{eventdetails.date}} <br />
 Host ID: {{eventdetails.host_id}} <br />
@@ -6,3 +8,56 @@ Category: {{eventdetails.category}} <br />
 Description: {{eventdetails.description}} <br />
 Start Time: {{eventdetails.start_time}} <br />
 End Time: {{eventdetails.end_time}} <br /> <br />
+
+-->
+
+<div class="tile-container">
+	<div class="tile switch2 animate-if" ng-if="eventdetails.name" style="height:auto;">
+
+	    <div class="tile-img-container" id="switch2-1">
+	      <!--<img class="tile-img" src="images/clink.png"/>-->
+	    </div>
+	    <div class="tile-text" id="switch2-2" style="height:auto;">
+	      	<h3>{{eventdetails.name}}</h3>
+			<div ng-if="eventdetails.public == 0">
+			This is event is private <br />
+			</div>
+			<div ng-if="eventdetails.category">
+				{{eventdetails.category}} <br />
+			</div>
+			<div ng-if="eventdetails.description">
+				{{eventdetails.description}} <br />
+			</div>
+			<div ng-if="eventdetails.start_time">
+				{{eventdetails.start_time}} <br />
+			</div>
+			<div ng-if="eventdetails.end_time">
+				{{eventdetails.end_time}} <br /> <br />
+			</div>
+			<br />
+			<!-- public 1 is true, status is never rsvp'd-->
+			<!-- ng-if hides divs/buttons if the it returns false, -->
+	      	<button class="btn j-join" ng-click="requestRSVP()" ng-if="eventdetails.public == 1 && eventdetails.status == 0">RSVP</button>
+	      	<button class="btn j-join" ng-click="requestRSVP()" ng-if="eventdetails.public == 0 && eventdetails.status == 0">Request RSVP</button>
+	      	<!-- Host invinited you to rsvp, 2 -->
+	      	<div class="animate-if" ng-if="eventdetails.status == 2">
+				<button class="btn j-join" ng-click="acceptRSVP()" ng-if="eventdetails.status == 2">Accept RSVP</button>
+				<button class="btn j-join" ng-click="declineRSVP()" ng-if="eventdetails.status == 2">Decline RSVP</button>
+			</div>
+			<!-- you requested the rsvp 1 -->
+	      	<div class="animate-if" ng-if="eventdetails.status == 1">
+				RSVP Pending <br /> <br />
+			</div>
+			<!-- you are successfully rsvp'd 5-->
+			<div class="animate-if" ng-if="eventdetails.status == 5">
+				You Are RSVP'd! <br /> <br />
+			</div>
+			<!-- cancel your rsvp if you rsvp'd -->
+			<button class="btn j-join" ng-click="cancelRSVP()" ng-if="eventdetails.status == 5">Cancel RSVP</button>
+
+			<!-- You are the host, and you want to edit your event, 6-->
+			<button class="btn j-join" ng-click="editEvent()" ng-if="eventdetails.status == 6">Edit Event</button>
+	    </div>
+
+	  </div>
+</div>
