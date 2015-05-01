@@ -37,11 +37,11 @@ angular.module('nudgeWebAppApp')
         //Create json from form data
         var serverJson = {
             "session_token": $scope.token,
-            "name": $scope.newEvent.name,
-            "start_time": $scope.newEvent.start,
-            "end_time": $scope.newEvent.end,
-            "public": $scope.newEvent.publicity,
-            "category": $scope.newEvent.category
+            "name": $scope.eventdetails.name,
+            "start_time": $scope.eventdetails.start,
+            "end_time": $scope.eventdetails.end,
+            "public": $scope.eventdetails.public,
+            "category": $scope.eventdetails.category
         }
 
         //Submit json, and store the server response in scope variable
