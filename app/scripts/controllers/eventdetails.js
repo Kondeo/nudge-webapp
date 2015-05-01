@@ -6,7 +6,7 @@
  */
 angular.module('nudgeWebAppApp')
   .controller('EventDetailsCtrl', function ($scope, Events, RSVP, $location, $rootElement, $routeParams) {
-    
+
     //Redirects to desired local url
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
@@ -51,7 +51,7 @@ angular.module('nudgeWebAppApp')
 
     //Supposed to redirect to event edit page
     $scope.editEvent = function(){
-        $scope.go("");
+        $scope.go("/edit");
     }
 
     //Fetch the session token
