@@ -28,18 +28,8 @@ angular.module('nudgeWebAppApp')
     //Form submission function
     $scope.submit = function(){
 
-        //Create json from form data
-        var serverJson = {
-            "session_token": $scope.token,
-            "name": $scope.eventdetails.name,
-            "start_time": $scope.eventdetails.start,
-            "end_time": $scope.eventdetails.end,
-            "public": $scope.eventdetails.public,
-            "category": $scope.eventdetails.category
-        }
-
         //Submit json, and store the server response in scope variable
-        $scope.serverResponse = Events.save(serverJson, function(){
+        $scope.serverResponse = Events.save(eventdetails, function(){
             //If, after the submission is complete
             if ($scope.serverResponse.error) {
                 alert("There was an error!");
