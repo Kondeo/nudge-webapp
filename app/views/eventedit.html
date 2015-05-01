@@ -1,3 +1,16 @@
+<!--
+Event Details parameters
+Name: {{eventdetails.name}} <br />
+Date: {{eventdetails.date}} <br />
+Host ID: {{eventdetails.host_id}} <br />
+Public: {{eventdetails.public}} <br />
+Category: {{eventdetails.category}} <br />
+Description: {{eventdetails.description}} <br />
+Start Time: {{eventdetails.start_time}} <br />
+End Time: {{eventdetails.end_time}} <br /> <br />
+
+-->
+
 <div class="join-container">
 	<div class="j-back">
 		<h2 class="j-head">Edit Event</h2>
@@ -7,7 +20,7 @@
 			<input class="j-input-1"
 			name="name"
 			placeholder="*Event Title"
-			ng-model="newEvent.name"
+			ng-model="eventdetails.name"
 			ng-minlength=5
 			ng-maxlength=400 ng-focus required></input>
 			<small class="error"
