@@ -7,7 +7,7 @@
  * Sends the user to the new event page
  */
 angular.module('nudgeWebAppApp')
-  .controller('EventEditCtrl', function ($scope, Events, $location, $rootElement) {
+  .controller('EventEditCtrl', function ($scope, Events, $location, $rootElement, $routeParams) {
 
     //Redirects to desired local url
     $scope.go = function(requrl){
