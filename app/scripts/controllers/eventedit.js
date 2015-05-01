@@ -15,12 +15,6 @@ angular.module('nudgeWebAppApp')
         $location.path(requrl);
     }
 
-    //Set default for form radio button concerning
-    //privacy. Defaults to private (false)
-    $scope.newEvent = {
-        publicity: '0'
-      };
-
       //Fetch the session token
       var session_token = getCookie("session_token");
       //Define json to be sent to server
