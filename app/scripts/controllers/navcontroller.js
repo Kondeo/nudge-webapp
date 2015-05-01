@@ -6,5 +6,19 @@
  */
 angular.module('nudgeWebAppApp')
   .controller('navController', function ($scope, Events, $location, $rootElement) {
+  	//Function to determine if user is logged in
     $scope.isLoggedIn = isLoggedIn();
+
+    //Function to catch whenever we change our url, works fine
+    $scope.$on('$routeChangeSuccess', function () 
+    {
+            setTimeout(function () {
+        $scope.$apply(function(){
+        	//Doesnt close with animation, but other line does
+            //document.getElementById("bs-example-navbar-collapse-1").className="collapse";
+    		$('#bs-example-navbar-collapse-1').collapse('hide');
+        });
+    }, 100);
+    });
+
   });

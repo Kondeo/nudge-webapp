@@ -14,11 +14,11 @@ angular.module('nudgeWebAppApp')
         console.log("url switch for " + requrl);
         $location.path(requrl);
     }
-    
+
     //Set default for form radio button concerning
     //privacy. Defaults to private (false)
     $scope.newEvent = {
-        publicity: 'false'
+        publicity: '0'
       };
 
     //Get session token
@@ -28,7 +28,7 @@ angular.module('nudgeWebAppApp')
     $scope.submit = function(){
 
         //Create json from form data
-        var serverJson = { 
+        var serverJson = {
             "session_token": $scope.token,
             "name": $scope.newEvent.name,
             "start_time": $scope.newEvent.start,
@@ -42,9 +42,9 @@ angular.module('nudgeWebAppApp')
             //If, after the submission is complete
             if ($scope.serverResponse.error) {
                 alert("There was an error!");
-            } 
+            }
             //If the server responded with an ID, that is the event ID
-            else if ($scope.serverResponse.id) {                
+            else if ($scope.serverResponse.id) {
                 //Take the user to the page for the event that was just created
                 $scope.go("/event/" + $scope.serverResponse.id);
 

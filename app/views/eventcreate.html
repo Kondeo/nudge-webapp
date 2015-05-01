@@ -10,12 +10,12 @@
 			ng-model="newEvent.name"
 			ng-minlength=5
 			ng-maxlength=400 ng-focus required></input>
-			<small class="error" 
+			<small class="error"
 	             ng-show="
 	             form.name.$dirty && form.name.$invalid && form.name.$error.required">
 	             <br />An event name is required.<br />
 	         </small>
-	         <small class="error" 
+	         <small class="error"
 	             ng-show="
 	             form.name.$dirty && form.name.$invalid && form.name.$error.minlength">
 	             <br />Must be at least 5 characters.<br />
@@ -48,7 +48,7 @@
 	      	<span class="error"
 	      		ng-show="form.end.$error.datetimelocal">
       			<br />Not a valid date!</span>
-      		<span class="error" 
+      		<span class="error"
       			ng-show="(form.end.$error.required || !form.end.$valid) && end.blur"><br />Valid date is required</span>
 
       		<br /><br />
@@ -58,18 +58,18 @@
 			<br />
 			<input type="radio"
 				name="publicity"
-				value="false"
-				ng-model="newEvent.publicity"> Private 
+				value="0"
+				ng-model="newEvent.publicity"> Private
 			<input type="radio"
 				name="publicity"
-				value="true"
+				value="1"
 				ng-model="newEvent.publicity"> Public
 			<br /><br />
 			<button class="btn j-join"
 				type="submit"
 				ng-disabled="form.$invalid"
 				>Create</button>
-			
+
 			<div class="j-required">* required fields</div>
 		</form>
 	</div>
