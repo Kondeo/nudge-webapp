@@ -37,7 +37,7 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 			<br />*Start<br />
 			<input type="datetime-local"
 				name="start"
-				ng-model="newEvent.start"
+				ng-model="eventdetails.start_time"
 	      		placeholder="yyyy-MM-ddTHH:mm:ss"
 	      		min="2014-01-01T00:00:00"
 	      		max="2018-12-31T00:00:00"
@@ -52,7 +52,7 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 	      	<br />*End<br />
 			<input type="datetime-local"
 				name="end"
-				ng-model="newEvent.end"
+				ng-model="eventdetails.end_time"
       			placeholder="yyyy-MM-ddTHH:mm:ss"
       			min="2014-01-01T00:00:00"
       			max="2018-12-31T00:00:00"
@@ -67,21 +67,21 @@ End Time: {{eventdetails.end_time}} <br /> <br />
       		<br /><br />
 			<input class="j-input-1"
 			placeholder="Category"
-			ng-model="newEvent.category"></input>
+			ng-model="eventdetails.category"></input>
 			<br />
 			<input type="radio"
 				name="publicity"
 				value="0"
-				ng-model="newEvent.publicity"> Private
+				ng-model="eventdetails.public"> Private
 			<input type="radio"
 				name="publicity"
 				value="1"
-				ng-model="newEvent.publicity"> Public
+				ng-model="eventdetails.public"> Public
 			<br /><br />
 			<button class="btn j-join"
 				type="submit"
 				ng-disabled="form.$invalid"
-				>Create</button>
+				>Save Changes</button>
 
 			<div class="j-required">* required fields</div>
 		</form>
