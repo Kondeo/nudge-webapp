@@ -55,8 +55,10 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 			<!-- cancel your rsvp if you rsvp'd -->
 			<button class="btn j-join" ng-click="cancelRSVP()" ng-if="eventdetails.status == 5">Cancel RSVP</button>
 
-			<!-- You are the host, and you want to edit your event, 6-->
+			<!-- You are the host, and you want to edit your event, or you want to view/change atendees, 6-->
 			<button class="btn j-join" ng-click="editEvent()" ng-if="eventdetails.status == 6">Edit Event</button>
+			<br>
+			<button class="btn j-join" ng-click="editAttendees()" ng-if="eventdetails.status == 6">Attendees</button>
 	    </div>
 
 	  </div>
