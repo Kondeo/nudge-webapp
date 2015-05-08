@@ -42,7 +42,7 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 	      	<!-- Host invinited you to rsvp, 2 -->
 	      	<div class="animate-if" ng-if="eventdetails.status == 2">
 				<button class="btn j-join" ng-click="acceptRSVP()" ng-if="eventdetails.status == 2">Accept RSVP</button>
-				<button class="btn j-join" ng-click="declineRSVP()" ng-if="eventdetails.status == 2">Decline RSVP</button>
+				<button class="btn j-join" ng-click="cancelRSVP()" ng-if="eventdetails.status == 2">Decline RSVP</button>
 			</div>
 			<!-- you requested the rsvp 1 -->
 	      	<div class="animate-if" ng-if="eventdetails.status == 1">
