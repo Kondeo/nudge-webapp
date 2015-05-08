@@ -47,6 +47,8 @@ End Time: {{eventdetails.end_time}} <br /> <br />
 			<!-- you requested the rsvp 1 -->
 	      	<div class="animate-if" ng-if="eventdetails.status == 1">
 				RSVP Pending <br /> <br />
+				<!-- button to cancel you rsvp request, still part of 1 -->
+				<button class="btn j-join" ng-click="cancelRSVP()" ng-if="eventdetails.status == 1">Cancel RSVP Request</button>
 			</div>
 			<!-- you are successfully rsvp'd 5-->
 			<div class="animate-if" ng-if="eventdetails.status == 5">
