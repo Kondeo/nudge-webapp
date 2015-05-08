@@ -78,6 +78,10 @@ angular
         templateUrl: 'views/welcome.html',
         /*controller: 'AboutCtrl'*/
       })
+      .when('/event/:id/attendees', {
+        templateUrl: 'views/attendees.html',
+        controller: 'AttendeesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
