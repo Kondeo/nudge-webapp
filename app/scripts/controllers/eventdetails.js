@@ -6,7 +6,7 @@
  */
 angular.module('nudgeWebAppApp')
   .controller('EventDetailsCtrl', function ($scope, Events, RSVP, $location, $rootElement, $routeParams) {
-    
+
     //Redirects to desired local url
     $scope.go = function(requrl){
         console.log("url switch for " + requrl);
@@ -26,6 +26,7 @@ angular.module('nudgeWebAppApp')
         var sumbitjson = {};
         submitjson.Id = "accept";
         submitjson.session_token = session_token;
+        submitjson.attendee_id = $routeParams.userid;
         submitjson.event_id = $routeParams.eventid;
         $scope.acceptResult = RSVP.accept(submitjson);
         $scope.eventdetails.status = "5";
