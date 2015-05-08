@@ -16,6 +16,7 @@ angular.module('nudgeWebAppApp')
     $scope.requestRSVP = function(){
         var submitjson = {};
         submitjson.Id = "request";
+        submitjson.attendee_id = "me";
         submitjson.session_token = session_token;
         submitjson.event_id = $routeParams.eventid;
         $scope.addResult = RSVP.request(submitjson);
@@ -26,7 +27,6 @@ angular.module('nudgeWebAppApp')
         var sumbitjson = {};
         submitjson.Id = "accept";
         submitjson.session_token = session_token;
-        submitjson.attendee_id = $routeParams.userid;
         submitjson.event_id = $routeParams.eventid;
         $scope.acceptResult = RSVP.accept(submitjson);
         $scope.eventdetails.status = "5";
@@ -36,6 +36,7 @@ angular.module('nudgeWebAppApp')
         var sumbitjson = {};
         submitjson.Id = "decline";
         submitjson.session_token = session_token;
+        submitjson.attendee_id = "me";
         submitjson.event_id = $routeParams.eventid;
         $scope.declineResult = RSVP.decline(submitjson);
         $scope.eventdetails.status = "0";
