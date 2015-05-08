@@ -28,7 +28,7 @@ angular.module('nudgeWebAppApp')
         submitjson.Id = "accept";
         submitjson.session_token = session_token;
         submitjson.event_id = $routeParams.eventid;
-        $scope.acceptResult = RSVP.accept(submitjson);
+        $scope.acceptResult = RSVP.attend(submitjson);
         $scope.eventdetails.status = "5";
     }
 
