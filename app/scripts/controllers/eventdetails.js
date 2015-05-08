@@ -47,6 +47,11 @@ angular.module('nudgeWebAppApp')
         $scope.go("");
     }
 
+    //Redirects to Attendees page
+    $scope.editAttendees = function(){
+        $scope.go("event/" + $routeParams.eventid + "/attendees");
+    }
+
     //Fetch the session token
     var session_token = getCookie("session_token");
     //Define json to be sent to server
