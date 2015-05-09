@@ -33,9 +33,10 @@ angular.module('nudgeWebAppApp')
     var session_token = getCookie("session_token");
     //Define json to be sent to server
     var submitjson = {};
-    //Add session token to json
+    //Get url parameter for ID, and add it to the json
+    submitjson.Id = $routeParams.eventid;
     submitjson.session_token = session_token;
-    //Submit json to server and store result in scope variable
-    $scope.friends = Friends.query(submitjson, catchError);
+    //Send the json data to the server and store the result in scope variable
+    $scope.attendees = Events.hosted(submitjson, catchError);
 
   });

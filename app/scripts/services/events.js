@@ -61,6 +61,11 @@ angular.module('nudgeWebAppApp')
                 params: { Id: '' },
                 isArray: false
             },
+            hosted: {
+                method: 'POST',
+                params: { Id: 'hosted' },
+                isArray: false
+            },
             request: {
                 method: 'POST',
                 params: { Id: 'request' },
