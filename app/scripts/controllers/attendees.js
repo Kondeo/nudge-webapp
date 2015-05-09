@@ -8,7 +8,7 @@
  * Controller of the nudgeWebAppApp
  */
 angular.module('nudgeWebAppApp')
-  .controller('AttendeesCtrl', function ($scope, $routeParams, Events) {
+  .controller('AttendeesCtrl', function ($scope, $routeParams, RSVP) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -23,8 +23,8 @@ angular.module('nudgeWebAppApp')
     //Define json to be sent to server
     var submitjson = {};
     //Get url parameter for ID, and add it to the json
-    submitjson.event_id = $routeParams.eventid;
+    submitjson.event_id = $routeParams.id;
     submitjson.session_token = session_token;
     //Send the json data to the server and store the result in scope variable
-    $scope.attendees = Events.hosted(submitjson, catchError);
+    $scope.attendees = RSVP.hosted(submitjson, catchError);
   });
