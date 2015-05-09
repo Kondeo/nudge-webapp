@@ -2,6 +2,7 @@
   <h2>Attendees</h2><br />
   <div class="tile switch1">
 
+    <!-- Search Box -->
     <div class="tile-text" id="switch1-2">
       <h3>Search</h3>
       <form ng-submit="searchSubmit()">
@@ -14,6 +15,7 @@
 
   </div>
 
+  <!-- Search Results -->
   <h2 ng-if="search.result[0].id" class="animate-if">Search Results</h2><br />
   <div ng-if="search.result[0].id" ng-repeat="profile in search.result" class="tile switch3 animate-if">
     <div class="tile-img-container" id="switch3-1">
@@ -22,7 +24,52 @@
       <h3>{{profile.name}}</h3>
       {{profile.username}}
     </div>
+  </div>
 
+  <!-- Requested RSVP's -->
+  <div id="Requested Rsvp's">
+  <h2>Requested Rsvp's</h2><br />
+
+    <div class="tile switch1 animate-repeat"
+    ng-if="events.sent"
+    ng-repeat="event in events.sent">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2">
+        <!-- event[0] is first event in current event object -->
+        <h3>{{event[0].name}}</h3>
+        {{event[0].date}}<br />
+        {{event[0].category}}
+
+        <!-- Add decline and accept button here -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- All Attendees, RSVP'd -->
+  <div id="Rsvp's">
+  <h2>Rsvp's</h2><br />
+
+    <div class="tile switch1 animate-repeat"
+    ng-if="events.sent"
+    ng-repeat="event in events.sent">
+
+      <div class="tile-img-container" id="switch1-1">
+      <!--<img class="tile-img" src="images/friends.png"/>-->
+      </div>
+      <div class="tile-text" id="switch1-2">
+        <!-- event[0] is first event in current event object -->
+        <h3>{{event[0].name}}</h3>
+        {{event[0].date}}<br />
+        {{event[0].category}}
+
+        <!-- Add decline and accept button here -->
+      </div>
+    </div>
   </div>
 
 </div>
