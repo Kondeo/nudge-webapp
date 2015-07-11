@@ -1,6 +1,6 @@
 'use strict';
 
-var apiBase = '';
+var apiBase = 'server/';
 
 /**
  * @ngdoc overview

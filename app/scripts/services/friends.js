@@ -3,7 +3,7 @@
 angular.module('nudgeWebAppApp')
   .factory('Friends', ['$resource', function($resource) {
 
-    return $resource( apiBase + 'friend/:Id',
+    return $resource( apiBase + 'users.php/friend/:Id',
         { Id: '@Id' }, {
             query: {
                 method: 'POST',
@@ -17,7 +17,7 @@ angular.module('nudgeWebAppApp')
             },
             remove: {
                 method: 'POST',
-                params: { Id: 'remove' }, 
+                params: { Id: 'remove' },
                 isArray: false
             },
             accept: {
