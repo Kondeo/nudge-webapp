@@ -17,6 +17,6 @@
     delete_cookie();
 
     //Redirect to main site
-    $scope.go("/");
+    $scope.go("#/");
 
 });

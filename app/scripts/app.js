@@ -1,6 +1,6 @@
 'use strict';
 
-var apiBase = 'http://backend.nudgeit.co/';
+var apiBase = 'server/';
 
 /**
  * @ngdoc overview
