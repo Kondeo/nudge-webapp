@@ -2,10 +2,10 @@
 	<div class="j-back">
 		<h2 class="j-head">Join</h2>
 		<form name = "signupForm" class="j-form">
-			<input name = "username" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.username.$valid}" placeholder="* Email" ng-model="join.username" required></input><br />
-			<input type="password" class="j-input-1" placeholder="* Password" ng-model="join.password" required></input><br />
-			<input type="password" class="j-input-1" placeholder="* Confirm Password" ng-model="join.confirmpassword" required></input><br />
-			<input class="j-input-1" placeholder="* Name" ng-model="join.fullname" required></input><br />
+			<input name = "username" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.username.$valid && signupForm.$dirty}" placeholder="* Email" ng-model="join.username" required></input><br />
+			<input name = "password" type="password" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.password.$valid && signupForm.$dirty}" placeholder="* Password" ng-model="join.password" required></input><br />
+			<input name = "confirmpassword" type="password" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.confirmpassword.$valid && signupForm.$dirty}" placeholder="* Confirm Password" ng-model="join.confirmpassword" required></input><br />
+			<input name = "name" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.name.$valid && signupForm.$dirty}" placeholder="* Name" ng-model="join.fullname" required></input><br />
 			<input class="j-input-1" placeholder="Phone Number" ng-model="join.phone"></input><br />
 			<input class="j-input-1" placeholder="Address 1" ng-model="join.add1"></input><br />
 			<input class="j-input-1" placeholder="Address 2" ng-model="join.add2"></input><br />
