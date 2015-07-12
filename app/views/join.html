@@ -2,7 +2,7 @@
 	<div class="j-back">
 		<h2 class="j-head">Join</h2>
 		<form name = "signupForm" class="j-form">
-			<input class="j-input-1" placeholder="* Email" ng-model="join.username" required></input><br />
+			<input name = "username" ng-class = "{'j-input-1': true, 'dangerField': !signupForm.username.$valid}" placeholder="* Email" ng-model="join.username" required></input><br />
 			<input type="password" class="j-input-1" placeholder="* Password" ng-model="join.password" required></input><br />
 			<input type="password" class="j-input-1" placeholder="* Confirm Password" ng-model="join.confirmpassword" required></input><br />
 			<input class="j-input-1" placeholder="* Name" ng-model="join.fullname" required></input><br />
