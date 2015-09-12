@@ -62,7 +62,6 @@ Incomplete list.
 
 <b>Team</b><br />
 
-Jacob > Design<br />
 Aaron (torch2424)> Frontend dev ;)<br />
 Julian > Backend dev
 
